@@ -3,5 +3,6 @@ class GardenUsersController < ApplicationController
 
   def index
     @garden_users = GardenUser.all
+    @users = User.all
   end
 end
