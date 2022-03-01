@@ -1,9 +1,8 @@
-# User.destroy_all
-# Task.destroy_all
-# Garden.destroy_all
+User.destroy_all
+Task.destroy_all
+Garden.destroy_all
 
-user_array = []
-user = User.new(
+user1 = User.new(
   email: "a@a.a",
   password: "123456",
   first_name: "Ramy",
@@ -13,10 +12,9 @@ user = User.new(
   status: 1,
   seed_kind: "plante"
 )
-user.save!
-user_array << user
+user1.save!
 
-  user = User.new(
+  user2 = User.new(
     email: "c@c.c",
     password: "123456",
     first_name: "Julien",
@@ -26,10 +24,9 @@ user_array << user
     status: 1,
     seed_kind: "plante"
   )
-  user.save!
-  user_array << user
+  user2.save!
 
-  user = User.new(
+  user3 = User.new(
     email: "b@b.b",
     password: "123456",
     first_name: "Hadrien",
@@ -39,17 +36,14 @@ user_array << user
     status: 1,
     seed_kind: "plante"
   )
-  user.save!
-  user_array << user
+  user3.save!
 
-  task_array = []
   task = Task.new(
     title: "Create a Printer Policy",
     description: "A printer policy, which could specify the instances where employees are allowed to print hard copies of documents and when they should opt for just digital copies instead. Use Earth Day as an opportunity to introduce this policy and explain the environmental benefits of cutting down on paper usage.",
     exp: 10
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Reduce shower time by 2 min",
@@ -57,7 +51,6 @@ user_array << user
     exp: 5
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Don't eat meat for one day",
@@ -65,7 +58,6 @@ user_array << user
     exp: 10
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Big spring cleaning... in your cleaning products",
@@ -73,7 +65,6 @@ user_array << user
     exp: 25
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Caught red-handed",
@@ -81,7 +72,6 @@ user_array << user
     exp: 10
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Give your waste to the worms",
@@ -89,7 +79,6 @@ user_array << user
     exp: 45
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "#NoFilter",
@@ -97,7 +86,6 @@ user_array << user
     exp: 15
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Snif",
@@ -105,7 +93,6 @@ user_array << user
     exp: 5
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "VROOM",
@@ -113,7 +100,6 @@ user_array << user
     exp: 15
   )
   task.save!
-  task_array << task
 
   task = Task.new(
     title: "Layer Up!",
@@ -121,11 +107,10 @@ user_array << user
     exp: 35
   )
   task.save!
-  task_array << task
 
   garden_array = []
   garden = Garden.new(
-    name: "Parc des Tuilleries"
+    name: "Parc des Tuilleries",
+    user: user1
   )
   garden.save!
-  garden_array << garden
