@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    # @select_task = Select_task.new
-    @select_task = Task.find(:task_id)
+    @select_task = SelectTask.new
+    # @select_task = Task.find(id)
   end
 end

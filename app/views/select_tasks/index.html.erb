@@ -1,0 +1,11 @@
+<h1>Selected tasks</h1>
+
+<ul>
+  <% @select_tasks.each do |select_task| %>
+    <% @tasks.each do |task| %>
+      <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
+        <li><%= task.title %> </li>
+      <%end %>
+    <%end %>
+  <%end %>
+</ul>

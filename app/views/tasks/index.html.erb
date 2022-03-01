@@ -1,9 +1,10 @@
 <h1>Welcome to the task board</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li> <%= task.title %>
-         <%= task.description %>
-         <%= task.exp %>
-    </li>
-  <%end%>
-</ul>
+    <ul>
+      <% @tasks.each do |task| %>
+        <li><input type="checkbox">
+            <%= task.title %>
+            <%= task.description %>
+            <%= task.exp %>
+        </li>
+      <%end%>
+    </ul>
