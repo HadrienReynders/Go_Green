@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     resources :garden_users, only: [ :index, :show ]
   end
 
-  resources :tasks, only: [ :index ] do
-    resources :select_tasks, only: [ :index, :update ]
-  end
+  resources :tasks, only: [ :index ]
+  resources :select_tasks, only: [ :index, :update, :new, :create ]
+
 
 end
