@@ -7,5 +7,9 @@ class PagesController < ApplicationController
   def dashboard
     @garden_users = GardenUser.all
     @users = User.all
+
+    @select_tasks = SelectTask.all
+    @tasks = Task.all
   end
+
 end

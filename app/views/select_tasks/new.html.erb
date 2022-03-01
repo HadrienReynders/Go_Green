@@ -1,0 +1,8 @@
+<h1>Welcome to the task board</h1>
+
+  <div class="select-tasks">
+    <%= simple_form_for @select_task do |f| %>
+      <%= f.association :task, as: :check_boxes %>
+      <%= f.submit class: 'btn-dark' %>
+    <% end %>
+  </div>
