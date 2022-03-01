@@ -11,13 +11,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <% @gardens.each do |garden| %>
-              <%= link_to gardens_path(garden) %>
+          <li class="">
+            <% if current_user.exp < 20 && current_user.exp >= 0 %>
+              level 1
+            <% elsif current_user.exp < 50 && current_user.exp >= 20 %>
+              level 2
+            <% elsif current_user.exp < 100 && current_user.exp >= 50 %>
+              level 3
+            <% elsif current_user.exp < 150 && current_user.exp >= 100 %>
+              level 4
+            <% else  %>
+              level 5
             <% end %>
+          </li>
+         <li class="nav-item active">
+            <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%= link_to "Tasks", tasks_path, class: "nav-link" %>

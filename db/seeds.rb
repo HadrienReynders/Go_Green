@@ -8,7 +8,7 @@ user1 = User.new(
   first_name: "Ramy",
   last_name: "Sha",
   avatar_url: "https://avatars.githubusercontent.com/u/96581841?v=4",
-  exp: 0,
+  exp: 120,
   status: 1,
   seed_kind: "plante"
 )
@@ -20,7 +20,7 @@ user1.save!
     first_name: "Julien",
     last_name: "Lozet",
     avatar_url: "https://avatars.githubusercontent.com/u/92589286?v=4",
-    exp: 0,
+    exp: 50,
     status: 1,
     seed_kind: "plante"
   )
@@ -32,7 +32,7 @@ user1.save!
     first_name: "Hadrien",
     last_name: "Reynders",
     avatar_url: "https://avatars.githubusercontent.com/u/82088724?v=4",
-    exp: 0,
+    exp: 10,
     status: 1,
     seed_kind: "plante"
   )
@@ -108,7 +108,6 @@ user1.save!
   )
   task.save!
 
-  garden_array = []
   garden = Garden.new(
     name: "Parc des Tuilleries",
     user: user1
