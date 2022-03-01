@@ -6,6 +6,5 @@ class User < ApplicationRecord
 
   has_many :select_tasks
   has_many :tasks, through: :select_tasks
-
-
+  has_many :gardens, through: :garden_users
 end
