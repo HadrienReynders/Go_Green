@@ -16,7 +16,7 @@ class SelectTasksController < ApplicationController
       @select_task = SelectTask.new(task_id: task_id.to_i, user_id: current_user.id)
       @select_task.save
     end
-    redirect_to select_tasks_path
+    redirect_to dashboard_path
   end
 
   #private
