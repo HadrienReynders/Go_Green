@@ -1,0 +1,2 @@
+class SelectTasksController < ApplicationController
+end
