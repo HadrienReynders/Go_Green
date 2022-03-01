@@ -1,6 +1,7 @@
 User.destroy_all
 Task.destroy_all
 Garden.destroy_all
+GardenUser.destroy_all
 
 user1 = User.new(
   email: "a@a.a",
@@ -10,7 +11,7 @@ user1 = User.new(
   avatar_url: "https://avatars.githubusercontent.com/u/96581841?v=4",
   exp: 120,
   status: 1,
-  seed_kind: "plante"
+  seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEgfEKvxUHxc5m-br8DZsllKRMSn_NTcBLg&usqp=CAU"
 )
 user1.save!
 
@@ -22,7 +23,7 @@ user1.save!
     avatar_url: "https://avatars.githubusercontent.com/u/92589286?v=4",
     exp: 50,
     status: 1,
-    seed_kind: "plante"
+    seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzYnsUPk24xhVI6G24TdS6bTOl0GkIbZAmQ&usqp=CAU"
   )
   user2.save!
 
@@ -34,9 +35,11 @@ user1.save!
     avatar_url: "https://avatars.githubusercontent.com/u/82088724?v=4",
     exp: 10,
     status: 1,
-    seed_kind: "plante"
+    seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow8VmqTotMFzHCnL1TaWZsPNK8OTLq-Qb3w&usqp=CAU"
   )
   user3.save!
+
+  #create new tasks
 
   task = Task.new(
     title: "Create a Printer Policy",
@@ -108,8 +111,65 @@ user1.save!
   )
   task.save!
 
+  # create new gardens
+
   garden = Garden.new(
     name: "Parc des Tuilleries",
     user: user1
   )
   garden.save!
+
+  garden = Garden.new(
+    name: "Versailles's garden",
+    user: user1
+  )
+  garden.save!
+
+  garden = Garden.new(
+    name: "Go-green's garden",
+    user: user1
+  )
+  garden.save!
+
+  #create garden users
+    #garden 1
+
+    garden_user = GardenUser.new(
+      user_id: 1,
+      garden_id: 1
+    )
+    garden_user.save!
+
+    garden_user = GardenUser.new(
+      user_id: 2,
+      garden_id: 1
+    )
+    garden_user.save!
+
+    garden_user = GardenUser.new(
+      user_id: 3,
+      garden_id: 1
+    )
+    garden_user.save!
+
+    #garden 2
+
+    garden_user = GardenUser.new(
+      user_id: 1,
+      garden_id: 2
+    )
+    garden_user.save!
+
+    garden_user = GardenUser.new(
+      user_id: 2,
+      garden_id: 2
+    )
+    garden_user.save!
+
+    #garden 3
+
+    garden_user = GardenUser.new(
+      user_id: 3,
+      garden_id: 3
+    )
+    garden_user.save!
