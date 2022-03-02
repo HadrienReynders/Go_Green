@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :tasks, only: [ :index ]
-  resources :select_tasks, only: [ :index, :update, :new, :create ]
+  resources :select_tasks, only: [ :index, :update, :new, :create, :destroy ]
+  patch 'select_tasks/:id', to: 'select_tasks#complete'
 
 
 end

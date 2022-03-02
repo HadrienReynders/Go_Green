@@ -4,7 +4,19 @@
   <% @select_tasks.each do |select_task| %>
     <% @tasks.each do |task| %>
       <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
-        <li><%= task.title %> </li>
+        <li><%= task.title %>
+        <li><%= select_task.status %>
+            <%= link_to "done",
+                select_task_path(select_task[:id]),
+                method: :patch,
+                data: { confirm: "Have you really done this ?" }
+                %> / <%=  link_to "Delete task",
+                select_task_path(select_task[:id]),
+                method: :delete,
+                data: { confirm: "Are you sure?" }
+
+                %>
+        </li>
       <%end %>
     <%end %>
   <%end %>
