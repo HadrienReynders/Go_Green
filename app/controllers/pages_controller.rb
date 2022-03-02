@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home]
 
   def home
   end
@@ -11,5 +11,4 @@ class PagesController < ApplicationController
     @select_tasks = SelectTask.all
     @tasks = Task.all
   end
-
 end

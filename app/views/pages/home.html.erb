@@ -1,11 +1,11 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://play-lh.googleusercontent.com/qathNiUFRcxKdgGQ7YtC0SfyyMU_breoEXyrAcUGe1W96XMd4szjMQxzJyfsSnZTtDY=w412-h220-rw);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.giphy.com/media/3o7WTOoMpIy5uXW3PW/giphy.gif);">
   <div class="container">
     <h1><strong>Go Green</strong></h1>
     <p>The game that makes you <strong>Go Greener</strong></p>
     <% if user_signed_in? %>
       <%= link_to "Play Now", dashboard_path, class: "btn btn-ghost" %>
     <% else %>
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-ghost" %>
+      <%= link_to "Sign in", new_user_session_path, class: "btn btn-ghost" %>         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-ghost" %>
     <% end %>
   </div>
 </div>
