@@ -3,9 +3,9 @@
     <h1><strong>Go Green</strong></h1>
     <p>The game that makes you <strong>Go Greener</strong></p>
     <% if user_signed_in? %>
-      <%= link_to "Play Now", dashboard_path, class: "btn btn-ghost" %>
+      <%= link_to "Play Now", gardens_path, class: "btn btn-ghost" %>
     <% else %>
-      <%= link_to "Sign in", new_user_session_path, class: "btn btn-ghost" %>         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-ghost" %>
+      <%= link_to "Play", new_user_session_path, class: "btn btn-ghost" %>         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-ghost" %>
     <% end %>
   </div>
 </div>
