@@ -1,5 +1,9 @@
 <ul>
   <% @gardens.each do |garden| %>
-    <li><%= link_to garden.name, dashboard_path %></li>
+    <% garden.garden_users.each do |garden_user| %>
+      <% if garden_user.user_id == current_user.id %>
+        <li><%= link_to garden.name, dashboard_path(garden_id: garden.id) %></li>
+      <% end %>
+    <% end %>
   <% end %>
 </ul>
