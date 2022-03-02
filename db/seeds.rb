@@ -7,11 +7,12 @@ user1 = User.new(
   email: "a@a.a",
   password: "123456",
   first_name: "Ramy",
-  last_name: "Sha",
+  last_name: "Shawaf",
   avatar_url: "https://avatars.githubusercontent.com/u/96581841?v=4",
   exp: 120,
   status: 1,
-  seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEgfEKvxUHxc5m-br8DZsllKRMSn_NTcBLg&usqp=CAU"
+  seed_kind: "Palm tree",
+  plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEgfEKvxUHxc5m-br8DZsllKRMSn_NTcBLg&usqp=CAU"
 )
 user1.save!
 
@@ -23,7 +24,8 @@ user1.save!
     avatar_url: "https://avatars.githubusercontent.com/u/92589286?v=4",
     exp: 50,
     status: 1,
-    seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzYnsUPk24xhVI6G24TdS6bTOl0GkIbZAmQ&usqp=CAU"
+    seed_kind: "Pomodoro tree",
+    plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzYnsUPk24xhVI6G24TdS6bTOl0GkIbZAmQ&usqp=CAU"
   )
   user2.save!
 
@@ -35,7 +37,8 @@ user1.save!
     avatar_url: "https://avatars.githubusercontent.com/u/82088724?v=4",
     exp: 10,
     status: 1,
-    seed_kind: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow8VmqTotMFzHCnL1TaWZsPNK8OTLq-Qb3w&usqp=CAU"
+    seed_kind: "Apple tree",
+    plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow8VmqTotMFzHCnL1TaWZsPNK8OTLq-Qb3w&usqp=CAU"
   )
   user3.save!
 
