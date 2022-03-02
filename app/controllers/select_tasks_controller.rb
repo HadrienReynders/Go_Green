@@ -18,12 +18,12 @@ class SelectTasksController < ApplicationController
       @select_task = SelectTask.new(task_id: task_id.to_i, user_id: current_user.id)
       @select_task.save
     end
-    redirect_to dashboard_path
+    redirect_to gardens_path
   end
 
   def destroy
     @select_task.destroy
-    redirect_to dashboard_path
+    redirect_back(fallback_location: root_path)
   end
 
   def update
@@ -31,7 +31,7 @@ class SelectTasksController < ApplicationController
     @select_task.save
     @select_task.user.exp += @select_task.task.exp
     @select_task.user.save!
-    redirect_to dashboard_path
+    redirect_back(fallback_location: root_path)
   end
 
   private
