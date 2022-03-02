@@ -1,9 +1,10 @@
-User.destroy_all
-Task.destroy_all
-Garden.destroy_all
 GardenUser.destroy_all
+Garden.destroy_all
+SelectTask.destroy_all
+Task.destroy_all
+User.destroy_all
 
-user1 = User.new(
+ramy = User.new(
   email: "a@a.a",
   password: "123456",
   first_name: "Ramy",
@@ -14,9 +15,9 @@ user1 = User.new(
   seed_kind: "Palm tree",
   plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEgfEKvxUHxc5m-br8DZsllKRMSn_NTcBLg&usqp=CAU"
 )
-user1.save!
+ramy.save!
 
-  user2 = User.new(
+  julien = User.new(
     email: "c@c.c",
     password: "123456",
     first_name: "Julien",
@@ -27,9 +28,9 @@ user1.save!
     seed_kind: "Pomodoro tree",
     plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzYnsUPk24xhVI6G24TdS6bTOl0GkIbZAmQ&usqp=CAU"
   )
-  user2.save!
+  julien.save!
 
-  user3 = User.new(
+  hadrien = User.new(
     email: "b@b.b",
     password: "123456",
     first_name: "Hadrien",
@@ -40,7 +41,7 @@ user1.save!
     seed_kind: "Apple tree",
     plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow8VmqTotMFzHCnL1TaWZsPNK8OTLq-Qb3w&usqp=CAU"
   )
-  user3.save!
+  hadrien.save!
 
   #create new tasks
 
@@ -116,63 +117,62 @@ user1.save!
 
   # create new gardens
 
-  garden = Garden.new(
+  garden1 = Garden.new(
     name: "Parc des Tuilleries",
-    user: user1
+    user: ramy
   )
-  garden.save!
+  garden1.save!
 
-  garden = Garden.new(
+  garden2 = Garden.new(
     name: "Versailles's garden",
-    user: user1
+    user: ramy
   )
-  garden.save!
+  garden2.save!
 
-  garden = Garden.new(
+  garden3 = Garden.new(
     name: "Go-green's garden",
-    user: user1
+    user: ramy
   )
-  garden.save!
+  garden3.save!
 
   #create garden users
     #garden 1
 
     garden_user = GardenUser.new(
-      user_id: 1,
-      garden_id: 1
+      user: ramy,
+      garden: garden1
     )
     garden_user.save!
 
     garden_user = GardenUser.new(
-      user_id: 2,
-      garden_id: 1
+      user: julien,
+      garden: garden2
     )
     garden_user.save!
 
     garden_user = GardenUser.new(
-      user_id: 3,
-      garden_id: 1
+      user: hadrien,
+      garden: garden3
     )
     garden_user.save!
 
-    #garden 2
 
     garden_user = GardenUser.new(
-      user_id: 1,
-      garden_id: 2
+      user: ramy,
+      garden: garden2
     )
     garden_user.save!
 
     garden_user = GardenUser.new(
-      user_id: 2,
-      garden_id: 2
+      user: julien,
+      garden: garden1
     )
     garden_user.save!
 
     #garden 3
 
     garden_user = GardenUser.new(
-      user_id: 3,
-      garden_id: 3
+      user: hadrien,
+      garden: garden1
     )
     garden_user.save!
