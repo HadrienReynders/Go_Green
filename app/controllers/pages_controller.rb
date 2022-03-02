@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @garden = Garden.find(params[:garden_id])
     @garden_users = GardenUser.all
     @users = User.all
 
