@@ -2,17 +2,28 @@
   <div class="row">
     <% @garden_users.each do |garden_user| %>
       <% @users.each do |user| %>
-        <% if garden_user.user_id == user.id %>
-          <div class="col-sm">
+        <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
+          <div class="col-sm", style="border-style: solid;">
             <br>
-            <li><%= "Name: #{user.first_name} #{user.last_name}" %></li>
+            <h2><%= "#{user.first_name} #{user.last_name}" %></h2>
             <br>
             <p><%= "XP: #{user.exp}" %></p>
-            <p><%= "Type: #{user.seed_kind}" %></p>
             <p><%= "Status: #{user.status}" %></p>
+            <br>
             <img src=<%= user.seed_kind %> alt="seed_kind" width="150" height="150">
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
             <br>
+            <br>
+            <h2>Tasks</h2>
+            <br>
+            <% if user.tasks == [] %>
+              <p><%= "#{user.first_name} has no tasks" %></p>
+            <% end %>
+            <% user.tasks.each do |task| %>
+              <h6><strong><%= task.title %></strong></h6>
+              <p><%= task.description %></p>
+              <br>
+            <% end %>
             <br>
           </div>
         <% end %>
