@@ -2,7 +2,7 @@
 
   <div class="select-tasks">
     <%= simple_form_for @select_task do |f| %>
-      <%= f.association :task, as: :check_boxes %>
+      <%= f.association :task, as: :check_boxes, input_html: { data: {controller:'checkbox', target:'check', action:'click->toggle'} } %>
       <%= f.submit class: 'btn-dark' %>
     <% end %>
   </div>
