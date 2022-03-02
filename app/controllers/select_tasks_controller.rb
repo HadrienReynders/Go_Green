@@ -1,4 +1,6 @@
 class SelectTasksController < ApplicationController
+  before_action :get_select_task, only: [:update, :destroy]
+
   def new
     @select_task = SelectTask.new
     @tasks = Task.all
@@ -19,7 +21,24 @@ class SelectTasksController < ApplicationController
     redirect_to dashboard_path
   end
 
-  #private
+  def destroy
+    @select_task.destroy
+    redirect_to dashboard_path
+  end
+
+  def update
+    @select_task.status = true
+    @select_task.save
+    @select_task.user.exp += @select_task.task.exp
+    @select_task.user.save!
+    redirect_to dashboard_path
+  end
+
+  private
+
+  def get_select_task
+    @select_task = SelectTask.find(params[:id])
+  end
 
   # def select_task_params
   #   params.require(:select_task).permit(:task_id)
