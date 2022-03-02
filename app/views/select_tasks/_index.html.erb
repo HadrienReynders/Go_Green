@@ -1,23 +1,31 @@
 <h1>Your tasks</h1>
 
-<ul>
-  <% @select_tasks.each do |select_task| %>
-    <% @tasks.each do |task| %>
-      <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
-        <li><%= task.title %>
-        <li><%= select_task.status %>
-            <%= link_to "done",
-                select_task_path(select_task[:id]),
-                method: :patch,
-                data: { confirm: "Have you really done this ?" }
-                %> / <%=  link_to "Delete task",
-                select_task_path(select_task[:id]),
-                method: :delete,
-                data: { confirm: "Are you sure?" }
-
-                %>
+<% @select_tasks.each do |select_task| %>
+  <% @tasks.each do |task| %>
+    <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
+      <% if select_task.status == false %>
+        <h6><strong><%= task.title %></strong></h6>
+        <p><%= task.description %></p>
+          <%= link_to "done",
+              select_task_path(select_task[:id]),
+              method: :patch,
+              data: { confirm: "Have you really done this ?" }
+              %> / <%=  link_to "Delete task",
+              select_task_path(select_task[:id]),
+              method: :delete,
+              data: { confirm: "Are you sure?" }
+          %>
         </li>
-      <%end %>
-    <%end %>
-  <%end %>
-</ul>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>Completed tasks</h1>
+
+<% @select_tasks.each do |select_task| %>
+  <% if select_task.status == true %>
+    <h6><strong><%= select_task.task.title %></strong></h6>
+    <p><%= select_task.task.description %></p>
+  <% end %>
+<% end %>
