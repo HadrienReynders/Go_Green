@@ -1,6 +1,10 @@
-<h1>Your tasks</h1>
+<br>
 
-<% if @select_tasks.select {|task| task[:status] == false } == [] %>
+<h2>Your tasks</h2>
+
+<br>
+
+<% if @select_tasks.select {|task| task[:status] == false && task.user_id == current_user.id } == [] %>
   <p><%= "You have no tasks for today" %></p>
 <% end %>
 
@@ -24,3 +28,7 @@
     <% end %>
   <% end %>
 <% end %>
+
+<br>
+
+<br>
