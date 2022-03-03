@@ -15,15 +15,16 @@
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
             <br>
             <br>
-            <h2>Tasks</h2>
+            <h2> Recent Completed Tasks</h2>
             <br>
             <% if user.tasks == [] %>
-              <p><%= "#{user.first_name} has no tasks" %></p>
+              <p><%= "#{user.first_name} has no completed tasks" %></p>
             <% end %>
-            <% user.tasks.each do |task| %>
-              <h6><strong><%= task.title %></strong></h6>
-              <p><%= task.description %></p>
-              <br>
+            <% @completed_tasks.each do |completed_task| %>
+              <% if completed_task.status == true && completed_task.user_id == user.id && garden_user.garden_id == @garden.id %>
+                <h6><strong><%= "#{completed_task.task.title} - #{completed_task.updated_at.strftime("%d %B, %Y | %I:%M %p")}" %></strong></h6>
+                <p><%= completed_task.task.description %></p>
+              <% end %>
             <% end %>
             <br>
           </div>
