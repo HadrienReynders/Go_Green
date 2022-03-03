@@ -1,8 +1,9 @@
 .bottom-menu {
-  background-color: $go-blue-dark;
   height: 200px;
-  width: auto;
-  display: flex;
+  width: fill-available;
+  position: fixed;
+  bottom: 0px
+
 }
 
 .circle-left {
@@ -11,15 +12,63 @@
   height: 400px;
   width: 400px;
   position: absolute;
-  left:-200px;
+  left: -70px;
+  top: -95px;
+  z-index: 1;
+
+  & img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+  }
 
 }
+
+.plant-lvl-center {
+  background: azure;
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  z-index: 0;
+}
+
+.exp-bar {
+  justify-content: center;
+  display: flex;
+  margin-top: 80px;
+}
+
 
 .circle-right {
   background-color: $go-blue-light;
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 500px;
   position: absolute;
+  right: -70px;
+  top: -140px;
+  z-index: 1;
+
+  & .last-completed-tasks {
+    //box-sizing: content-box;
+    object-fit: contain;
+    background-color: white;
+    width: 70%;
+    position: absolute;
+    top: 75px;
+    left: 95px;;
+  }
+
+  & li {
+    list-style: none;
+    font-size: 12 px;
+  }
+
+  & h4 {
+    font-size: 14 px;
+  }
 
 }
