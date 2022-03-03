@@ -1,4 +1,8 @@
-<h4>Recent Completed tasks</h4>
+<br>
+
+<h2>Recent Completed tasks</h2>
+
+<br>
 
 <% if @completed_tasks.select {|task| task[:status] == true && task.user_id == current_user.id } == [] %>
   <p><%= "You have no recent completed tasks" %></p>
@@ -9,3 +13,7 @@
     <li><%= "#{completed_task.task.title} - #{completed_task.updated_at.strftime("%d/%m/%y | %I:%M %p")}" %></li>
   <% end %>
 <% end %>
+
+<br>
+
+<br>

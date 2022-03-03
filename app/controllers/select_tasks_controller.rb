@@ -2,6 +2,7 @@ class SelectTasksController < ApplicationController
   before_action :get_select_task, only: [:update, :destroy]
 
   def new
+    @gardens = Garden.all
     @select_task = SelectTask.new
     @tasks = Task.all
   end
