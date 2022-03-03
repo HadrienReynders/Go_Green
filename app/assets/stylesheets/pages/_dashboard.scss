@@ -24,8 +24,10 @@
 
 .garden-container {
   display: flex;
+  align-self: bottom;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .user-plant {

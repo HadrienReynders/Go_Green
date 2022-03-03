@@ -1,4 +1,4 @@
-<h2>Recent Completed tasks</h2>
+<h4>Recent Completed tasks</h4>
 <% if @completed_tasks.select {|task| task[:status] == true && task.user_id == current_user.id } == [] %>
   <p><%= "You have no recent completed tasks" %></p>
 <% end %>

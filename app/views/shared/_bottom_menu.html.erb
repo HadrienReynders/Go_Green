@@ -1,10 +1,14 @@
 <div class="bottom-menu">
+
   <div class="circle-left">
-    <img src=<%= current_user.plant_url %> alt="Planty">
+    <%= render "garden_users/lvlup_plant", user: current_user %>
   </div>
 
   <div class="plant-lvl-center">
       <%= render 'shared/explvl'%>
+  </div>
+
+  <div class="ground">
   </div>
 
   <div class="circle-right">
