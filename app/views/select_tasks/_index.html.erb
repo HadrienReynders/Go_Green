@@ -7,6 +7,7 @@
       <% if @select_tasks.select {|task| task[:status] == false } == [] %>
         <p><%= "You have selected no tasks for today" %></p>
       <% end %>
+
       <% @select_tasks.each do |select_task| %>
         <% @tasks.each do |task| %>
           <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
@@ -30,6 +31,10 @@
       <br>
 
       <h1>Recent Completed tasks</h1>
+
+      <% if @completed_tasks.select {|task| task[:status] == false } == [] %>
+        <p><%= "You have no recent completed tasks" %></p>
+      <% end %>
 
       <% @completed_tasks.each do |completed_task| %>
         <% if completed_task.status == true %>
