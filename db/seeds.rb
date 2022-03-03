@@ -10,10 +10,10 @@ ramy = User.new(
   first_name: "Ramy",
   last_name: "Shawaf",
   avatar_url: "https://avatars.githubusercontent.com/u/96581841?v=4",
-  exp: 120,
+  exp: 400,
   status: 1,
   seed_kind: "Palm tree",
-  plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxEgfEKvxUHxc5m-br8DZsllKRMSn_NTcBLg&usqp=CAU"
+  plant_url: "images/bean/bean_2.png"
 )
 ramy.save!
 
@@ -36,7 +36,7 @@ ramy.save!
     first_name: "Hadrien",
     last_name: "Reynders",
     avatar_url: "https://avatars.githubusercontent.com/u/82088724?v=4",
-    exp: 10,
+    exp: 320,
     status: 1,
     seed_kind: "Apple tree",
     plant_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTow8VmqTotMFzHCnL1TaWZsPNK8OTLq-Qb3w&usqp=CAU"
@@ -114,8 +114,6 @@ ramy.save!
     exp: 35
   )
   task.save!
-
-  # create new gardens
 
   garden1 = Garden.new(
     name: "Parc des Tuilleries",

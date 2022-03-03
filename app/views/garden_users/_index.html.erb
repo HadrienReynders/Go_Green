@@ -11,7 +11,7 @@
             <p><%= "Kind: #{user.seed_kind}" %></p>
             <p><%= "Status: #{user.status}" %></p>
             <br>
-            <img src=<%= user.plant_url %> alt="seed_kind" width="150" height="150">
+            <%= render "shared/lvlup-plant" %>
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
             <br>
             <br>

@@ -5,6 +5,5 @@ class GardenUsersController < ApplicationController
     @garden = Garden.find(params[:garden_id])
     @garden_users = GardenUser.all
     @users = User.all
-
   end
 end
