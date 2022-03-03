@@ -8,10 +8,14 @@
             <h2><%= "#{user.first_name} #{user.last_name}" %></h2>
             <br>
             <p><%= "XP: #{user.exp}" %></p>
-            <p><%= "Kind: #{user.seed_kind}" %></p>
+            <% if user.exp >= 0 && user.exp < 350 %>
+              <p>Kind: Bean</p>
+            <% elsif user.exp >= 300 && user.exp < 600 %>
+              <p>Kind: Tomato</p>
+            <% end %>
             <p><%= "Status: #{user.status}" %></p>
             <br>
-            <%= render "shared/lvlup-plant" %>
+            <%= render "garden_users/lvlup_plant", user: user %>
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
             <br>
             <br>
