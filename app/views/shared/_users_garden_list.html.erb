@@ -1,0 +1,13 @@
+<p>Garden'members</p>
+<ul>
+  <% @garden_users.each do |garden_user| %>
+        <% @users.each do |user| %>
+          <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
+                  <li> <img class="avatar" src=<%= user.avatar_url %> alt="avatar">
+                  <h4><%= "#{user.first_name}" %></h4>
+                  <p><%= "XP: #{user.exp}" %></p>
+                  </li>
+          <% end %>
+        <% end %>
+  <% end %>
+</ul>

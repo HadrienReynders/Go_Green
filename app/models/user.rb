@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :select_tasks
   has_many :tasks, through: :select_tasks
   has_many :gardens, through: :garden_users
+
+  validates :first_name, :last_name, :exp, :seed_kind, :status, :plant_url, :avatar_url, presence: true
 end
