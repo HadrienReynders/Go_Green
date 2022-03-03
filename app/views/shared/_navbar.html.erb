@@ -34,8 +34,17 @@
             <%= link_to "Select tasks", new_select_task_path, class: "nav-link" %>
           </li>
 
-          <li class="nav-item active">
-            <%= link_to "Garden list",  gardens_path, class: "nav-link" %>
+          <li class="nav-item dropdown">
+            <%= link_to "Garden list",  "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <% @gardens.each do |garden| %>
+                <% garden.garden_users.each do |garden_user| %>
+                  <% if garden_user.user_id == current_user.id %>
+                    <%= link_to garden.name, dashboard_path(garden_id: garden.id), class: "dropdown-item" %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
           </li>
 
           <li class="nav-item dropdown">
