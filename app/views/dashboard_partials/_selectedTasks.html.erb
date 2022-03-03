@@ -1,34 +1,30 @@
-<br>
-
+<div class="selected-tasks-container">
 <h2>Your tasks</h2>
 
-<br>
+  <% if @select_tasks.select {|task| task[:status] == false && task.user_id == current_user.id } == [] %>
+    <p><%= "You have no tasks for today" %></p>
+  <% end %>
 
-<% if @select_tasks.select {|task| task[:status] == false && task.user_id == current_user.id } == [] %>
-  <p><%= "You have no tasks for today" %></p>
-<% end %>
-
-<% @select_tasks.each do |select_task| %>
-  <% @tasks.each do |task| %>
-    <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
-      <% if select_task.status == false %>
-        <h6><strong><%= task.title %></strong></h6>
-        <p><%= task.description %></p>
-          <%= link_to "done",
-              select_task_path(select_task[:id]),
-              method: :patch,
-              data: { confirm: "Have you really done this ?" }
-              %> / <%=  link_to "Delete task",
-              select_task_path(select_task[:id]),
-              method: :delete,
-              data: { confirm: "Are you sure?" }
-          %>
-        </li>
+  <ul class="user-selected-tasks">
+    <% @select_tasks.each do |select_task| %>
+      <% @tasks.each do |task| %>
+        <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
+          <% if select_task.status == false %>
+            <li><%= task.title %>
+              <%= link_to "V",
+                  select_task_path(select_task[:id]),
+                  method: :patch,
+                  data: { confirm: "Have you really done this ?" }
+                  %> / <%=  link_to "X",
+                  select_task_path(select_task[:id]),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" }
+              %>
+            </li>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-<% end %>
+  </ul>
 
-<br>
-
-<br>
+</div>

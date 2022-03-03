@@ -7,6 +7,19 @@
 .windows-container {
   display: flex;
   justify-content: space-between;
+  margin: 50px;
+}
+
+.selected-tasks-container {
+  width: 350px;
+  height: 30vh;
+  background: white;
+  overflow: scroll;
+
+  & .user-selected-tasks {
+    list-style: none;
+    padding-left: 0px;
+  }
 }
 
 .garden-container {
