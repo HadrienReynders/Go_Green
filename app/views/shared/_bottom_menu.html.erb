@@ -1,16 +1,16 @@
 <div class="bottom-menu">
-  <div class="plant-info-left">
-    <div class="circle-left">
-
-    </div>
+  <div class="circle-left">
+    <img src=<%= current_user.plant_url %> alt="Planty">
+    <%# <h4> <%= current_user.seed_kind %></h4> %>
   </div>
 
   <div class="plant-lvl-center">
+      <%= render 'shared/explvl'%>
   </div>
 
-  <div class="task-menu-right">
-    <div class="circle-right">
-
+  <div class="circle-right">
+    <div class="last-completed-tasks">
+     <%= render 'dashboard_partials/completedTasks.html' %>
     </div>
   </div>
 </div>

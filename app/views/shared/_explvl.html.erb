@@ -1,0 +1,18 @@
+<div class="exp-bar">
+  <% if current_user.exp >= 0 && current_user.exp < 20 %>
+    level 1
+    <div class="level">xp  <%= current_user.exp %>/20</div>
+  <% elsif current_user.exp < 50 && current_user.exp >= 20 %>
+    level 2
+    <div class="level">xp  <%= current_user.exp %>/50</div>
+  <% elsif current_user.exp < 100 && current_user.exp >= 50 %>
+    level 3
+    <div class="level">xp  <%= current_user.exp %>/100</div>
+  <% elsif current_user.exp < 150 && current_user.exp >= 100 %>
+    level 4
+    <div class="level">xp  <%= current_user.exp %>/150</div>
+  <% else  %>
+    level 5
+    <div class="level">xp  <%= current_user.exp %>/200</div>
+  <% end %>
+</div>
