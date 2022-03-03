@@ -1,23 +1,54 @@
-<h1>Your tasks</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm", style="border-style: solid;">
 
-<ul>
-  <% @select_tasks.each do |select_task| %>
-    <% @tasks.each do |task| %>
-      <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
-        <li><%= task.title %>
-        <li><%= select_task.status %>
-            <%= link_to "done",
-                select_task_path(select_task[:id]),
-                method: :patch,
-                data: { confirm: "Have you really done this ?" }
-                %> / <%=  link_to "Delete task",
-                select_task_path(select_task[:id]),
-                method: :delete,
-                data: { confirm: "Are you sure?" }
+      <h1>Your tasks</h1>
 
+      <% if @select_tasks.select {|task| task[:status] == false } == [] %>
+        <p><%= "You have selected no tasks for today" %></p>
+      <% end %>
+      <% @select_tasks.each do |select_task| %>
+        <% @tasks.each do |task| %>
+          <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
+            <% if select_task.status == false %>
+              <h6><strong><%= task.title %></strong></h6>
+              <p><%= task.description %></p>
+                <%= link_to "done",
+                    select_task_path(select_task[:id]),
+                    method: :patch,
+                    data: { confirm: "Have you really done this ?" }
+                    %> / <%=  link_to "Delete task",
+                    select_task_path(select_task[:id]),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" }
                 %>
-        </li>
-      <%end %>
-    <%end %>
-  <%end %>
-</ul>
+              </li>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <br>
+
+      <h1>Recent Completed tasks</h1>
+
+      <% @completed_tasks.each do |completed_task| %>
+        <% if completed_task.status == true %>
+          <li><%= "#{completed_task.task.title} - #{completed_task.updated_at.strftime("%d %B, %Y | %I:%M %p")}" %></li>
+        <% end %>
+      <% end %>
+      <br>
+    </div>
+    <div class="col-sm", style="border-style: solid;">
+
+      <h1>Garden Users</h1>
+
+      <% @garden_users.each do |garden_user| %>
+        <% @users.each do |user| %>
+          <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
+            <li><%= user.first_name %></li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
