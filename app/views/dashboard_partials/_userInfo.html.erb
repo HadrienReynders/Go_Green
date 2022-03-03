@@ -9,7 +9,13 @@
             <br>
             <p><%= "XP: #{user.exp}" %></p>
             <p><%= "Kind: #{user.seed_kind}" %></p>
-            <p><%= "Status: #{user.status}" %></p>
+            <% if user.status == 0 %>
+              <p>Status: dead</p>
+            <% elsif user.status == 1 %>
+              <p>Status: alive</p>
+            <% else %>
+              <p>Status: thirsty</p>
+            <% end %>
             <br>
             <img src=<%= user.plant_url %> alt="seed_kind" width="150" height="150">
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
