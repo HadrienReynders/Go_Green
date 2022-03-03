@@ -8,6 +8,11 @@
             <h2><%= "#{user.first_name} #{user.last_name}" %></h2>
             <br>
             <p><%= "XP: #{user.exp}" %></p>
+            <% if user.exp >= 0 && user.exp < 350 %>
+              <p>Kind: Bean</p>
+            <% elsif user.exp >= 300 && user.exp < 600 %>
+              <p>Kind: Tomato</p>
+            <% end %>
             <p><%= "Kind: #{user.seed_kind}" %></p>
             <% if user.status == 0 %>
               <p>Status: dead</p>
@@ -17,6 +22,7 @@
               <p>Status: thirsty</p>
             <% end %>
             <br>
+            <%= render "garden_users/lvlup_plant", user: user %>
             <img src=<%= user.plant_url %> alt="seed_kind" width="150" height="150">
             <img src=<%= user.avatar_url %> alt="avatar" width="150" height="150">
             <br>
