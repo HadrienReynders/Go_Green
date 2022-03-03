@@ -1,0 +1,9 @@
+<h1>Garden Users</h1>
+
+<% @garden_users.each do |garden_user| %>
+  <% @users.each do |user| %>
+    <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
+      <li><%= user.first_name %></li>
+    <% end %>
+  <% end %>
+<% end %>
