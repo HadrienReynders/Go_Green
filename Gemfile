@@ -68,5 +68,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "notifications", "~> 1.1"
-
-gem 'whenever', require: false
