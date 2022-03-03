@@ -1,5 +1,5 @@
 <p>Garden'members</p>
-<ul>
+<ul class="member">
   <% @garden_users.each do |garden_user| %>
         <% @users.each do |user| %>
           <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
