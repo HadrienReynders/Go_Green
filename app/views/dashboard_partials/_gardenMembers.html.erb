@@ -1,9 +1,4 @@
-<br>
-
-<h2>Garden Users</h2>
-
-<br>
-
+<h4>Garden Users</h4>
 <% @garden_users.each do |garden_user| %>
   <% @users.each do |user| %>
     <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
@@ -11,7 +6,3 @@
     <% end %>
   <% end %>
 <% end %>
-
-<br>
-
-<br>

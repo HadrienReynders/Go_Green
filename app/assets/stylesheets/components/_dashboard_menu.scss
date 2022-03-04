@@ -53,11 +53,19 @@
 
   & p {
     margin-bottom: 0px;
+    color: $go-yellow-light;
   }
 
   & h4 {
     margin-bottom: 0px;
+    color: $go-yellow-light;
 
+  }
+
+  & .progress {
+    display: flex;
+    color: $go-yellow-light;
+    background: none;
   }
 
 }
@@ -111,9 +119,9 @@
 
   & h4 {
     margin-left: 70px;
-    margin-top: -30px;
-    margin-bottom: 40px;
-    color: wheat;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: #FFE57F;
   }
 
 }
