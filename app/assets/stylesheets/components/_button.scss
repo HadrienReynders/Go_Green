@@ -11,3 +11,20 @@
 .btn-ghost:hover {
   opacity: 1;
 }
+
+.btn-dashboard {
+  background-color: $go-yellow-dark;
+  color: $go-brown-dark;
+  border: 1px solid $go-brown-dark;
+  padding: 8px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.btn-dashboard:hover {
+  opacity: 1;
+}
