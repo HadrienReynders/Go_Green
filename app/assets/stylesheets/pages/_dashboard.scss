@@ -1,13 +1,13 @@
 .main-container {
   background: rgb(137,189,224);
   background: linear-gradient(0deg, rgba(137,189,224,1) 0%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 100%);
-  margin-bottom: 150px;
+  height: 90vh;
 }
 
 .windows-container {
   display: flex;
   justify-content: space-between;
-  margin: 50px;
+  //margin: 50px;
 }
 
 .selected-tasks-container {
@@ -24,10 +24,13 @@
 
 .garden-container {
   display: flex;
-  align-self: bottom;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 0;
+  position: relative;
+  top: -170px;
+
+
 }
 
 .user-plant {
