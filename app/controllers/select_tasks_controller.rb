@@ -19,7 +19,7 @@ class SelectTasksController < ApplicationController
       @select_task = SelectTask.new(task_id: task_id.to_i, user_id: current_user.id)
       @select_task.save
     end
-    redirect_to dashboard_path(garden_id: 1)
+    redirect_to dashboard_path(garden_id: 2)
   end
 
   def destroy
