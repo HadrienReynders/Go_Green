@@ -1,13 +1,15 @@
 <h4>Recent Completed tasks</h4>
-<% if @completed_tasks.select {|task| task[:status] == true && task.user_id == current_user.id } == [] %>
-  <p><%= "You have no recent completed tasks" %></p>
-<% end %>
-<ul>
-  <% @completed_tasks.each do |completed_task| %>
-    <% if completed_task.status == true && completed_task.user_id == current_user.id %>
-      <li><%= "#{completed_task.task.title}" %>
-      <%= "#{completed_task.updated_at.strftime("%d/%m/%y | %I:%M %p")}" %>
-      </li>
-    <% end %>
+<div class="done-tasks">
+  <% if @completed_tasks.select {|task| task[:status] == true && task.user_id == current_user.id } == [] %>
+    <p><%= "You have no recent completed tasks" %></p>
   <% end %>
-</ul>
+  <ul>
+    <% @completed_tasks.each do |completed_task| %>
+      <% if completed_task.status == true && completed_task.user_id == current_user.id %>
+        <li><%= "#{completed_task.task.title}" %>
+        <%= "#{completed_task.updated_at.strftime("%d/%m/%y | %H:%M:%S")}" %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
