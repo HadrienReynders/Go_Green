@@ -3,3 +3,33 @@
   background: linear-gradient(0deg, rgba(137,189,224,1) 0%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 100%);
   margin-bottom: 150px;
 }
+
+.windows-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.selected-tasks-container {
+  width: 350px;
+  height: 30vh;
+  background: white;
+  overflow: scroll;
+
+  & .user-selected-tasks {
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+
+.garden-container {
+  display: flex;
+  align-self: bottom;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.user-plant {
+  display: inline-block
+}

@@ -1,59 +1,69 @@
 .bottom-menu {
-  height: 200px;
-  width: fill-available;
+  height: 90px;
+  width: 100vw;
   position: fixed;
-  bottom: 0px
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
 }
 
 .circle-left {
-  background-color: $go-blue-light;
+  background-color: #E4FFFF;
   border-radius: 50%;
   height: 400px;
   width: 400px;
-  position: absolute;
+  position: relative;
   left: -70px;
-  top: -95px;
-  z-index: 1;
+  top: 70px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   & img {
     width: 200px;
     height: 200px;
-    position: absolute;
-    top: 80px;
-    left: 100px;
   }
 
 }
 
 .plant-lvl-center {
+  flex-direction: column;
   background: azure;
-  height: 150px;
   width: 100%;
+  height: 90px;
   position: absolute;
-  top: 50px;
-  z-index: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .exp-bar {
   justify-content: center;
   display: flex;
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-left: -108px;
 }
 
 
 .circle-right {
-  background-color: $go-blue-light;
+  background-color: #E4FFFF;
   border-radius: 50%;
   height: 500px;
   width: 500px;
   position: absolute;
-  right: -70px;
-  top: -140px;
-  z-index: 1;
+  right: -125px;
+  top: -260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
 
   & .last-completed-tasks {
-    //box-sizing: content-box;
     object-fit: contain;
     background-color: white;
     width: 70%;
@@ -62,9 +72,17 @@
     left: 95px;;
   }
 
+  & ul {
+    padding-left: 0px
+  }
+
   & li {
     list-style: none;
     font-size: 12 px;
+    background-color: $go-brown-light;
+    color: white;
+    padding: 5px;
+    margin: 5px;
   }
 
   & h4 {

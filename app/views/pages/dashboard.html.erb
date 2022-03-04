@@ -1,26 +1,19 @@
 <div class="main-container">
-  <div>
-    <%= render 'dashboard_partials/userInfo' %>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm", style="border-style: solid;">
+  <div class="windows-container">
+      <div>
+        <%= render 'dashboard_partials/users_garden_list' %>
+      </div>
+      <div>
         <%= render 'dashboard_partials/selectedTasks.html' %>
       </div>
-      <div class="col-sm", style="border-style: solid;">
-        <%= render 'dashboard_partials/completedTasks.html' %>
-      </div>
-      <div class="col-sm", style="border-style: solid;">
-        <%= render 'dashboard_partials/gardenMembers.html' %>
-      </div>
-    </div>
+
   </div>
-    <div>
-      <%= render 'shared/users_garden_list' %>
-    </div>
 
   <div>
-    <%= render 'shared/bottom_menu' %>
+    <%= render 'dashboard_partials/bottom_menu' %>
+      <div>
+    <%= render 'dashboard_partials/user_plant' %>
+    </div>
   </div>
 </div>

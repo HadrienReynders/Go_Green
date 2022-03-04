@@ -1,5 +1,11 @@
-.member li {
+.member {
   list-style: none;
   display: inline-block;
+  background-color: white;
+
+  & li {
+    list-style: none;
+    display: flex;
+  }
 
 }

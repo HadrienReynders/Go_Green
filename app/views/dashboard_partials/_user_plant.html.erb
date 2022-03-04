@@ -1,0 +1,28 @@
+<div class="garden-container">
+    <% @garden_users.each do |garden_user| %>
+      <% @users.each do |user| %>
+        <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
+          <div class="user-plant">
+            <br>
+            <h2><%= "#{user.first_name}" %></h2>
+            <%= render "garden_users/lvlup_plant", user: user %>
+            <br>
+            <p><%= "XP: #{user.exp}" %></p>
+            <% if user.exp >= 0 && user.exp < 350 %>
+              <p>Kind: Bean</p>
+            <% elsif user.exp >= 350 && user.exp < 600 %>
+              <p>Kind: Tomato</p>
+            <% end %>
+            <% if user.status == 0 %>
+              <p>Status: dead</p>
+            <% elsif user.status == 1 %>
+              <p>Status: alive</p>
+            <% else %>
+              <p>Status: thirsty</p>
+            <% end %>
+            <br>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+</div>
