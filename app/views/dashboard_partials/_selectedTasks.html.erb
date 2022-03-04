@@ -4,9 +4,6 @@
   <% if @select_tasks.select {|task| task[:status] == false && task.user_id == current_user.id } == [] %>
     <p><%= "You have no tasks for today" %></p>
   <% end %>
-
-  <%= render 'dashboard_partials/modal.html' %>
-
   <ul class="user-selected-tasks">
     <% @select_tasks.each do |select_task| %>
       <% @tasks.each do |task| %>
@@ -28,5 +25,6 @@
       <% end %>
     <% end %>
   </ul>
+  <%= render 'dashboard_partials/modal.html' %>
 
 </div>
