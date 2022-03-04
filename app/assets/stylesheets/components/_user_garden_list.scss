@@ -1,11 +1,12 @@
 .member {
   list-style: none;
   display: inline-block;
-  background-color: white;
 
   & li {
     list-style: none;
     display: flex;
+    align-items: center;
+    margin-bottom: 10px;
   }
 
 }
