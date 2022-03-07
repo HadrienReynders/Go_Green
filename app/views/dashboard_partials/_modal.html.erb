@@ -6,9 +6,10 @@
             <div class="modal-content">
               <h1>Welcome to the task board</h1>
 
-              <div class="select-tasks">
+              <div class="select-tasks" >
                 <%= simple_form_for @select_task do |f| %>
                   <%= f.association :task, as: :check_boxes, input_html: { data: {controller:'checkbox', target:'check', action:'click->toggle'} } %>
+                  <%= f.hidden_field :garden_id, value: params[:garden_id] %>
                   <%= f.submit class: 'btn-dark' %>
                 <% end %>
               </div>

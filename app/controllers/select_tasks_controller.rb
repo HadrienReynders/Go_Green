@@ -21,7 +21,8 @@ class SelectTasksController < ApplicationController
         DeleteUserSelectedTask.perform_later(current_user)  # <- The job is queued
       end
     end
-    redirect_to dashboard_path(garden_id: GardenUser.order(garden_id: :asc).find { |gardenuser| gardenuser.user_id == current_user.id }.garden_id)
+    # redirect_to dashboard_path(garden_id: GardenUser.order(garden_id: :asc).find { |gardenuser| gardenuser.user_id == current_user.id }.garden_id)
+     redirect_to dashboard_path(garden_id: params[:select_task][:garden_id])
   end
 
   def destroy
