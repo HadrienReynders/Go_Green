@@ -7,17 +7,17 @@
 //   <h1 data-target="hello.output"></h1>
 // </div>
 
-import { Controller } from "stimulus"
+// import { Controller } from "stimulus"
 
-export default class extends Controller {
-  static targets = [ "check" ]
+// export default class extends Controller {
+//   static targets = [ "check" ]
 
-  connect() {
-    console.log(this.checkTarget)
-    console.log("hey")
-  }
+//   connect() {
+//     console.log(this.checkTarget)
+//     console.log("hey")
+//   }
 
-  toggle(event) {
-    console.log(event)
-  }
-}
+//   toggle(event) {
+//     console.log(event)
+//   }
+// }
