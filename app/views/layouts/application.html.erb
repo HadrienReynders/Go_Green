@@ -15,12 +15,13 @@
   <body>
   <% if current_page?(root_path) %>
     <%= render 'shared/flashes' %>
+  <% elsif current_page?(new_user_registration_path) %>
+    <%= render 'shared/flashes' %>
   <% else %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
   <% end %>
 
     <%= yield %>
-
   </body>
 </html>
