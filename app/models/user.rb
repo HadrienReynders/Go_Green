@@ -9,4 +9,13 @@ class User < ApplicationRecord
   has_many :gardens, through: :garden_users
 
   validates :first_name, :last_name, :exp, :seed_kind, :status, :plant_url, :avatar_url, presence: true
+
+  after_commit :async_update # Run on create & update
+
+  private
+
+  def async_update
+    DeleteUserSelectedTask.perform_later(self)
+  end
+
 end
