@@ -18,5 +18,7 @@ class PagesController < ApplicationController
     @gardens = Garden.all
     @select_task = SelectTask.new
     @tasks = Task.all
+
+    @user = User.find_by_id(params[:user_id]) || current_user
   end
 end
