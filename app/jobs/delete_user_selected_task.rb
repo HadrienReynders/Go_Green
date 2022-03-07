@@ -4,7 +4,7 @@ class DeleteUserSelectedTask < ApplicationJob
   def perform(user)
     puts "Clearing selected tasks at midnight..."
     # TODO: clear selected tasks at midnight.
-    time_to_midnight = 86400 - Time.now.seconds_since_midnight - 30770
+    time_to_midnight = 86400 - Time.now.seconds_since_midnight
 
     sleep time_to_midnight
 
