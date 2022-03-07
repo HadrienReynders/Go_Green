@@ -1,17 +1,6 @@
 <div class="user-plant-info">
-            <h4><%= "#{current_user.first_name}"%></h4>
-            <%# <p> | <%= render "/shared/lvlup" %> - </p> %>
-
-            <% if current_user.exp >= 0 && current_user.exp < 350 %>
-              <p>Bean</p>
-            <% elsif current_user.exp >= 350 && current_user.exp < 600 %>
-              <p>Tomato</p>
-            <% end %>
-            <% if current_user.status == 0 %>
-              <p> - Dead</p>
-            <% elsif current_user.status == 1 %>
-              <p>- Alive</p>
-            <% else %>
-              <p>- Thirsty</p>
-            <% end %>
+            <h4><%= current_user.first_name%></h4>
+            <h4> - Level <%=compute_lvl(current_user).floor %></h4>
+            <p> - <%= plant_type(current_user)%></p>
+            <p> - <%= status(current_user)%></p>
 </div>

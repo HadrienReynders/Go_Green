@@ -1,11 +1,19 @@
 .xp-container {
   display: flex;
   justify-content: center;
-}
+  align-items: center;
 
-.plant-lvl-center .progress {
-  display: flex;
-  color: #FFE57F;
-  background: none;
-  width: 400px;
+
+  &  .progress {
+    display: flex;
+    background-color: $go-brown-light;
+    color: $go-yellow-light;
+    width: 30vw;
+    margin: 10px;
+  }
+
+  & .bg-warning {
+    background-color: $go-green-light !important;
+    color: $go-brown-dark;
+  }
 }

@@ -28,7 +28,7 @@ class PagesController < ApplicationController
 
   # private
 
-  helper_method :compute_lvl, :plant_img, :exp_lvl
+  helper_method :compute_lvl, :plant_img, :exp_lvl, :status, :plant_type
 
   def compute_lvl(user)
     user_exp = user.exp
@@ -49,4 +49,24 @@ class PagesController < ApplicationController
         "tomato/tomato_#{current_lvl - 8}.png"
       end
   end
+
+  def status(user)
+    if user.status == 0
+      "Dead"
+    elsif user.status == 1
+      "Fine"
+    else
+      "Thirsty"
+    end
+  end
+
+  def plant_type(user)
+    current_lvl = compute_lvl(user).floor
+    if current_lvl <= 8
+      "Bean tree"
+    elsif current_lvl >= 8
+      "Tomato tree"
+    end
+  end
+
 end

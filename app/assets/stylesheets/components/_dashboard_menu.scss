@@ -53,35 +53,22 @@
 
   & p {
     margin-bottom: 0px;
-    color: $go-yellow-light;
+    color: $go-green-light;
   }
 
   & h4 {
     margin-bottom: 0px;
-    color: $go-yellow-light;
+    color: $go-green-light;
 
   }
 
-  & .progress {
-    display: flex;
-    color: $go-yellow-light;
-    background: none;
-  }
-
 }
-
-.exp-bar {
-  justify-content: center;
-  display: flex;
-  margin-top: 40px;
-  margin-left: -108px;
-}
-
 
 .circle-right {
   background-color: $go-brown-dark;
   border: solid 10px $go-brown-light;
-  border-radius: 50%;
+  //border-radius: 50%;
+  border-radius: 30px;
   height: 500px;
   width: 500px;
   position: absolute;
