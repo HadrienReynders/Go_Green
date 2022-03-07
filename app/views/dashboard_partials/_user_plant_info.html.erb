@@ -1,6 +1,6 @@
 <div class="user-plant-info">
             <h4><%= "#{current_user.first_name}"%></h4>
-            <p> | <%= render "/shared/lvlup" %> - </p>
+            <%# <p> | <%= render "/shared/lvlup" %> - </p> %>
 
             <% if current_user.exp >= 0 && current_user.exp < 350 %>
               <p>Bean</p>
