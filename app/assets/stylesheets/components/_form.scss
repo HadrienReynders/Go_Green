@@ -28,13 +28,14 @@
   // font-family: roboto;
   border: solid 1px $go-green-light;
   font-family: "manrope";
-}
+  font-size: 19px;
 
-.form-check {
-  margin: 0px 0px 15px !important;
-  align-items: flex-start;
-  position: absolute;
-  left: 120px;
+  .form-check {
+    margin: 0px 0px 15px !important;
+    align-items: flex-start;
+    position: absolute;
+    left: 120px;
+  }
 }
 
 #gogreen {
