@@ -1,24 +1,49 @@
-.form-inputs {
-  background-color: white;
+@font-face {
+  font-family: 'Jumpman-1m20';
+  src: url('Jumpman-1m20.ttf');
+}
+
+@font-face {
+  font-family: 'PixelColeco-4vJW';
+  src: url('PixelColeco-4vJW.ttf');
+}
+
+@font-face {
+  font-family: 'PixelTakhisis-ZajJ';
+  src: url('PixelTakhisis-ZajJ.ttf');
+}
+
+.form-inputs-landing {
+  background-color: #d8f3dc;
   //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 1px;
+  border-radius: 7px;
+  box-shadow: 1px 2px 1px $go-green-middle;
   position: absolute;
   left: 50%;
   top: 40%;
   width: 400px;
   margin-left: -211px;
   margin-top: -91px;
-  font-family: roboto;
+  // font-family: roboto;
+  border: solid 1px $go-green-light;
+  font-family: "manrope";
+  font-size: 19px;
+
+  .form-check {
+    margin: 0px 0px 15px !important;
+    align-items: flex-start;
+    position: absolute;
+    left: 120px;
+  }
 }
 
 #gogreen {
   text-align: center;
   padding-top: 65px;
-  font-size: 70px;
-  color: $go-green-middle;
-  font-family: roboto slab;
+  font-size: 100px;
+  color: #54D43F;
+  font-family: "PixelColeco-4vJW";
 }
 
 .form-control {
