@@ -1,12 +1,13 @@
 <div class="bottom-menu">
 
   <div class="circle-left">
-    <%= render "garden_users/lvlup_plant", user: current_user %>
+    <%= render "garden_users/lvlup_plant", user: @user %>
   </div>
 
   <div class="plant-lvl-center">
-      <%= render 'dashboard_partials/user_plant_info'%>
       <%= render 'dashboard_partials/xpbar'%>
+      <%= render 'dashboard_partials/user_plant_info'%>
+
   </div>
   <div class="ground">
     <%= render 'dashboard_partials/user_plant' %>

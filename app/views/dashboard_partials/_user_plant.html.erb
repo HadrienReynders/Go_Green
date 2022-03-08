@@ -2,11 +2,12 @@
     <% @garden_users.each do |garden_user| %>
       <% @users.each do |user| %>
         <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
-          <div class="user-plant">
+          <a class="user-plant" href="<%= dashboard_path(garden_id: @garden.id, user_id: user.id) %>" >
             <br>
             <h4><%= "#{user.first_name}" %></h4>
+            <p><%= "level #{compute_lvl(user).floor}" %></p>
             <%= render "garden_users/lvlup_plant", user: user %>
-          </div>
+          </a>
         <% end %>
       <% end %>
     <% end %>

@@ -9,7 +9,7 @@
   //margin: 50px;
 
   & .garden-member {
-    background: wheat;
+    //background: $go-blue-dark;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -23,13 +23,29 @@
     padding-left: 0px;
     padding-bottom: 0px;
   }
+
+  & li {
+    background-color: $go-blue-light;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px 0px $go-blue-dark;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: auto;
+
+
+  }
+
+  & li:hover {
+    transform: scale(1.1);
+
+  }
 }
 
 .selected-tasks-container {
     width: 350px;
     height: 30vh;
     //background: $go-yellow-dark;
-    background: wheat;
+    background: $go-blue-dark;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -45,15 +61,6 @@
     overflow: scroll;
   }
 
-::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
-  }
-  /* Optional: show position indicator in red */
-  ::-webkit-scrollbar-thumb {
-      background: #FF0000;
-  }
-
   & li {
     background-color: $go-green-light;
     border-radius: 10px;
@@ -62,21 +69,10 @@
     box-shadow: 2px 4px 6px 0px #3E8932;
   }
 
-}
+  & li:hover {
+    transform: scale(1.1);
+  }
 
-.garden-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  position: relative;
-  top: -170px;
-
-
-}
-
-.user-plant {
-  display: inline-block
 }
 
 body {
