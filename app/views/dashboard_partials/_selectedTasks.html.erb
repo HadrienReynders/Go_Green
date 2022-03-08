@@ -10,17 +10,23 @@
         <% if select_task.user_id == current_user.id && select_task.task_id == task.id %>
           <% if select_task.status == false %>
             <li><%= task.title %>
-                <%= task.exp %>
-                <%= "- xp - " %>
-                <%= link_to "V",
-                    select_task_path(select_task[:id]),
-                    method: :patch,
-                    data: { confirm: "Have you really done this ?" }
-                    %> / <%=  link_to "X",
-                    select_task_path(select_task[:id]),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" }
-                %>
+                <div class="li-container">
+                  <div class="exp-container">
+                    <%= task.exp %>
+                    <%= "- xp - " %>
+                  </div>
+                  <div class="done-container">
+                    <%= link_to "V",
+                        select_task_path(select_task[:id]),
+                        method: :patch,
+                        data: { confirm: "Have you really done this ?" }
+                        %> / <%=  link_to "X",
+                        select_task_path(select_task[:id]),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" }
+                    %>
+                  </div>
+                </div>
             </li>
           <% end %>
         <% end %>
