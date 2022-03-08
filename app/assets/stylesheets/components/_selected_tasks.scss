@@ -1,7 +1,6 @@
 .selected-tasks-container {
   width: 350px;
   height: 40vh;
-  border-radius: 10px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -9,24 +8,51 @@
   align-items: center;
   margin: 10px 10px 0px 0px;
 
-& .user-selected-tasks {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 10px 0px 10px;
-  overflow: scroll;
-}
+  & .user-selected-tasks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+    overflow: scroll;
+  }
 
-& li {
-  background-color: $go-green-light-transp;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
-  box-shadow: 2px 4px 6px 0px #3E8932;
-}
+  & li {
+    background-color: $go-green-light-transp;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 4px 6px 0px #3E8932;
+  }
 
-& li:hover {
-  transform: scale(1.025);
-}
+  & li:hover {
+    transform: scale(1.025);
+  }
+
+  & li .li-container {
+    display: flex;
+    background: $go-blue-light-transp;
+    justify-content: space-between;
+    border-radius: 0px 0px 10px 10px;
+    align-items: center;
+  }
+
+  & li .li-container .exp-container {
+    padding: 5px;
+    //background-color: $go-blue-dark;
+  }
+
+  & li .li-container .done-container {
+    padding-right: 5px;
+    //background-color: $go-blue-dark;
+
+  }
+
+  & li .li-container .done-container a {
+    text-decoration: none;
+    color: white;
+    background-color: $go-blue-dark;
+    border-radius: 50%;
+    padding: 5px;
+
+  }
 
 }
