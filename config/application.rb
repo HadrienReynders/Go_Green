@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module GoGreen
   class Application < Rails::Application
+    config.assets.precompile << "audios/*"
     config.generators do |generate|
       generate.assets false
       generate.helper false
@@ -25,6 +26,5 @@ module GoGreen
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.active_job.queue_adapter = :sidekiq
-
   end
 end
