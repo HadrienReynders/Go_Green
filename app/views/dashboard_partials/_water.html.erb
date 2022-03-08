@@ -1,0 +1,11 @@
+<% if current_user.status == 2 || current_user.status == 1 %>
+  <%= link_to image_tag("water.png", width: "6%"),
+      user_hydrate_path(current_user.id),
+      method: :patch
+  %>
+<% else %>
+  <%= link_to image_tag("res.png", width: "6%"),
+      user_hydrate_path(current_user.id),
+      method: :patch
+  %>
+<% end %>
