@@ -7,19 +7,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
 
-  & .garden-member {
-    //background: $go-blue-dark;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0px 0px 10px;
-    padding: 10px;
-    position: relative;
-    //z-index: 5;
-  }
+.garden-member {
+  //background: $go-blue-dark;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 0px 10px;
+  padding: 10px;
+  position: relative;
+  //z-index: 5;
 
   & ul {
     padding-left: 0px;
@@ -46,44 +46,9 @@
   }
 }
 
-<<<<<<< HEAD
+
+
 // selected tasks are in the component file
-=======
-.selected-tasks-container {
-    width: 350px;
-    height: 40vh;
-    //background: $go-blue-dark;
-    //background-color: $go-blue-light;
-    border-radius: 10px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 10px 0px 0px;
-
-  & .user-selected-tasks {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10px 0px 10px;
-    overflow: scroll;
-  }
-
-  & li {
-    background-color: $go-green-light-transp;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 10px;
-    box-shadow: 2px 4px 6px 0px #3E8932;
-  }
-
-  & li:hover {
-    transform: scale(1.025);
-  }
-
-}
->>>>>>> master
 
 body {
 	background: linear-gradient(0deg, rgba(137,189,224,1) 0%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 100%);
