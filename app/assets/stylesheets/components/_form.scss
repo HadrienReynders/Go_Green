@@ -1,0 +1,26 @@
+.form-inputs {
+  background-color: white;
+  //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 400px;
+  margin-left: -211px;
+  margin-top: -91px;
+  font-family: roboto;
+}
+
+#gogreen {
+  text-align: center;
+  padding-top: 65px;
+  font-size: 70px;
+  color: $go-green-middle;
+  font-family: roboto slab;
+}
+
+.form-control {
+  border-radius: 5px;
+}
