@@ -22,11 +22,13 @@
   top: 70px;
   z-index: 5;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   & img {
-    height: 100%;
+    height: fit-content;
+    bottom: 80px;
+    position: relative;
   }
 
 }

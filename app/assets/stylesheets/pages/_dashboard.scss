@@ -17,6 +17,8 @@
     align-items: center;
     margin: 10px 0px 0px 10px;
     padding: 10px;
+    position: relative;
+    z-index: 20;
   }
 
   & ul {
@@ -36,7 +38,7 @@
   }
 
   & li:hover {
-    transform: scale(1.1);
+    transform: scale(1.025);
 
   }
 }
@@ -48,6 +50,8 @@
     background: $go-blue-dark;
     border-radius: 10px;
     display: flex;
+    position: relative;
+    z-index: 20;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,7 +74,7 @@
   }
 
   & li:hover {
-    transform: scale(1.1);
+    transform: scale(1.025);
   }
 
 }
