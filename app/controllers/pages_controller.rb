@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 
     @level = compute_lvl(current_user)
     @exp_lvl = exp_lvl(@level)
-    @plant = plant_img(@level)
+    # @plant = plant_img(@level)
 
   end
 
@@ -44,22 +44,32 @@ class PagesController < ApplicationController
 
   end
 
-  def plant_img(level)
+  def plant_img(level, user)
     current_lvl = level.floor
+    if user.status == 1
       if current_lvl <= 8
         "bean/bean_#{current_lvl}.png"
       elsif 9 <= current_lvl && current_lvl <= 16
         "tomato/tomato_#{current_lvl - 8}.png"
       end
+    elsif user.status == 2
+      if current_lvl <= 8
+        "bean/bean_#{current_lvl}_wilts.png"
+      elsif 9 <= current_lvl && current_lvl <= 16
+        "tomato/tomato_#{current_lvl - 8}_wilts.png"
+      end
+    else
+        "dead.png"
+    end
   end
 
   def status(user)
-    if user.status == 0
-      "Dead"
-    elsif user.status == 1
+    if user.status == 1
       "Fine"
-    else
+    elsif user.status == 2
       "Thirsty"
+    else
+      "Dead"
     end
   end
 
