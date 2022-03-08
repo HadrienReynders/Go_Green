@@ -1,12 +1,9 @@
 .selected-tasks-container {
   width: 350px;
-  height: 30vh;
-  //background: $go-yellow-dark;
-  background: $go-blue-dark;
+  height: 40vh;
   border-radius: 10px;
   display: flex;
   position: relative;
-  //z-index: 5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -21,7 +18,7 @@
 }
 
 & li {
-  background-color: $go-green-light;
+  background-color: $go-green-light-transp;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 10px;
