@@ -5,6 +5,7 @@
           <a class="user-plant" href="<%= dashboard_path(garden_id: @garden.id, user_id: user.id) %>" >
             <br>
             <h4><%= "#{user.first_name}" %></h4>
+            <p><%= "level #{compute_lvl(user).floor}" %></p>
             <%= render "garden_users/lvlup_plant", user: user %>
           </a>
         <% end %>

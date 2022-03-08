@@ -26,8 +26,7 @@
   justify-content: center;
 
   & img {
-    width: 200px;
-    height: 200px;
+    height: 100%;
   }
 
 }
@@ -40,7 +39,7 @@
   position: absolute;
   bottom: 0;
   z-index: 4;
-  display: flex;
+  //display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -53,35 +52,22 @@
 
   & p {
     margin-bottom: 0px;
-    color: $go-yellow-light;
+    color: $go-green-light;
   }
 
   & h4 {
     margin-bottom: 0px;
-    color: $go-yellow-light;
+    color: $go-green-light;
 
   }
 
-  & .progress {
-    display: flex;
-    color: $go-yellow-light;
-    background: none;
-  }
-
 }
-
-.exp-bar {
-  justify-content: center;
-  display: flex;
-  margin-top: 40px;
-  margin-left: -108px;
-}
-
 
 .circle-right {
   background-color: $go-brown-dark;
   border: solid 10px $go-brown-light;
-  border-radius: 50%;
+  //border-radius: 50%;
+  border-radius: 30px;
   height: 500px;
   width: 500px;
   position: absolute;
@@ -97,7 +83,8 @@
     object-fit: contain;
     width: 70%;
     position: absolute;
-    top: 75px;
+    //top: 75px;
+    top: 20px;
     left: 30px;
 
   }
