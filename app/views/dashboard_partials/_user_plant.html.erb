@@ -5,6 +5,7 @@
           <div class="user-plant">
             <br>
             <h4><%= "#{user.first_name}" %></h4>
+            <p><%= "level #{compute_lvl(user).floor}" %></p>
             <%= render "garden_users/lvlup_plant", user: user %>
           </div>
         <% end %>
