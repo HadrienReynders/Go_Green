@@ -1,10 +1,13 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Merriweather+Sans&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Maven+Pro:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+// $body-font: "Maven Pro", "Helvetica", "sans-serif";
+// $headers-font: "Maven Pro", "Helvetica", "sans-serif";
+$body-font: "Montserrat", "Helvetica", "sans-serif";
+$headers-font: "Montserrat", "Helvetica", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
