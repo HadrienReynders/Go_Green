@@ -14,8 +14,10 @@
   align-items: flex-end;
   justify-content: center;
   z-index: 0;
-  position: relative;
-  top: -240px;
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
 
 
 }

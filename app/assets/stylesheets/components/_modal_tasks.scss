@@ -1,0 +1,30 @@
+.modal-content {
+  border-radius: 10px;
+  padding: 10px;
+
+  & .form-check {
+    background-color: $go-green-light;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 2px 4px 6px 0px #3E8932;
+  }
+
+  & button, .btn-dark {
+    background-color: $go-yellow-dark;
+    color: $go-brown-dark;
+    border: 1px solid $go-brown-dark;
+    padding: 8px 24px;
+    border-radius: 10px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    margin-bottom: 7px;
+  }
+
+  & .form-check-input:checked {
+    background-color: $go-green-light;
+    border-color: $go-green-light;
+  }
+}
