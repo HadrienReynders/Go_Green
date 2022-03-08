@@ -19,7 +19,9 @@ class PagesController < ApplicationController
     @select_task = SelectTask.new
     @tasks = Task.all
 
-    # @user = User.find(user.id)
+
+    @user = User.find_by_id(params[:user_id]) || current_user
+
     @level = compute_lvl(current_user)
     @exp_lvl = exp_lvl(@level)
     @plant = plant_img(@level)
@@ -39,6 +41,7 @@ class PagesController < ApplicationController
   def exp_lvl(level)
     percentage = level - level.floor
     (percentage * 100).round(2)
+
   end
 
   def plant_img(level)
