@@ -36,7 +36,11 @@
     position: absolute;
     left: 120px;
   }
+
+  .form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;}
 }
+
+
 
 #gogreen {
   text-align: center;
