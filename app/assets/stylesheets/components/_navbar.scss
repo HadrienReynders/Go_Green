@@ -9,3 +9,13 @@
 .nav-link {
   text-align: center;
 }
+
+.navbar-nav .dropdown-menu {
+  background: $go-blue-dark;
+  border: none;
+
+  & :hover {
+
+    background: $go-green-light;
+  }
+}

@@ -4,11 +4,11 @@
     <div class="modal" data-controller="modal" data-demo-target="modal">
         <div class="modal-dialog">
             <div class="modal-content">
-              <h1>Welcome to the task board</h1>
+              <h4>Welcome to the task board</h4>
 
               <div class="select-tasks" >
                 <%= simple_form_for @select_task do |f| %>
-                  <%= f.association :task, as: :check_boxes, input_html: { data: {controller:'checkbox', target:'check', action:'click->toggle'} } %>
+                  <%= f.association :task, as: :check_boxes, input_html: { data: {controller:'checkbox', target:'check', action:'click->toggle'} }, legend_tag: false %>
                   <%= f.hidden_field :garden_id, value: params[:garden_id] %>
                   <%= f.submit class: 'btn-dark' %>
                 <% end %>

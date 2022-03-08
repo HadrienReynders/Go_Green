@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   resources :tasks, only: [ :index ]
   resources :select_tasks, only: [ :index, :update, :new, :create, :destroy ]
   patch 'select_tasks/:id', to: 'select_tasks#complete'
+  patch 'users/:id', to: 'users#hydrate', as: "user_hydrate"
 
   require "sidekiq/web"
-  authenticate :user, ->(user) { user.admin? } do
+  authenticate :user, ->(user) { user } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
