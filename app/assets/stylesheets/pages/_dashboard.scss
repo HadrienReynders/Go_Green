@@ -6,7 +6,7 @@
 .windows-container {
   display: flex;
   justify-content: space-between;
-  //margin: 50px;
+  align-items: flex-start;
 
   & .garden-member {
     //background: $go-blue-dark;
@@ -23,35 +23,37 @@
 
   & ul {
     padding-left: 0px;
-    padding-bottom: 0px;
+    padding-top: 10px;
   }
 
   & li {
-    background-color: $go-blue-light;
+    background-color: $go-blue-light-transp;
     border-radius: 20px;
     box-shadow: 2px 4px 6px 0px $go-blue-dark;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     width: auto;
-
-
+    padding-right: 10px;
   }
 
   & li:hover {
     transform: scale(1.025);
 
   }
+
+  & p, h4 {
+    margin-bottom: 0px;
+  }
 }
 
 .selected-tasks-container {
     width: 350px;
-    height: 30vh;
-    //background: $go-yellow-dark;
-    background: $go-blue-dark;
+    height: 40vh;
+    //background: $go-blue-dark;
+    //background-color: $go-blue-light;
     border-radius: 10px;
     display: flex;
     position: relative;
-    //z-index: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,7 +68,7 @@
   }
 
   & li {
-    background-color: $go-green-light;
+    background-color: $go-green-light-transp;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 10px;
