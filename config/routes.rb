@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   patch 'select_tasks/:id', to: 'select_tasks#complete'
 
   require "sidekiq/web"
-  authenticate :user, ->(user) { user.admin? } do
+  authenticate :user, ->(user) { user } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
