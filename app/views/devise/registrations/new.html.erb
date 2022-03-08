@@ -1,9 +1,31 @@
-<h2>Sign up</h2>
+<div class="container">
+  <h3 id="gogreen">Go Green!</h3><img src="" alt="">
+    <h4>Sign Up</h4>
+  <div id="background-wrap">
+      <div class="x1">
+          <div class="cloud"></div>
+      </div>
 
+      <div class="x2">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x3">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x4">
+          <div class="cloud"></div>
+      </div>
+
+      <div class="x5">
+          <div class="cloud"></div>
+      </div>
+  </div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs-landing">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,11 +37,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.button :submit, "Sign up" class: ""%>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

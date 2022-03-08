@@ -6,7 +6,7 @@
 .windows-container {
   display: flex;
   justify-content: space-between;
-  //margin: 50px;
+  align-items: flex-start;
 
   & .garden-member {
     //background: $go-blue-dark;
@@ -23,35 +23,37 @@
 
   & ul {
     padding-left: 0px;
-    padding-bottom: 0px;
+    padding-top: 10px;
   }
 
   & li {
-    background-color: $go-blue-light;
+    background-color: $go-blue-light-transp;
     border-radius: 20px;
     box-shadow: 2px 4px 6px 0px $go-blue-dark;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     width: auto;
-
-
+    padding-right: 10px;
   }
 
   & li:hover {
     transform: scale(1.025);
 
   }
+
+  & p, h4 {
+    margin-bottom: 0px;
+  }
 }
 
 .selected-tasks-container {
     width: 350px;
-    height: 30vh;
-    //background: $go-yellow-dark;
-    background: $go-blue-dark;
+    height: 40vh;
+    //background: $go-blue-dark;
+    //background-color: $go-blue-light;
     border-radius: 10px;
     display: flex;
     position: relative;
-    //z-index: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -66,7 +68,7 @@
   }
 
   & li {
-    background-color: $go-green-light;
+    background-color: $go-green-light-transp;
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 10px;
@@ -80,7 +82,7 @@
 }
 
 body {
-	background: #45c6fd;
+	background: linear-gradient(0deg, rgba(137,189,224,1) 0%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 100%);
 	color: #333;
 	font: 100% Arial, Sans Serif;
 	height: 100vh;
@@ -90,7 +92,7 @@ body {
 }
 
 #background-wrap {
-    bottom: 0;
+  bottom: 0;
 	left: 0;
 	padding-top: 50px;
 	position: fixed;
@@ -100,8 +102,7 @@ body {
 }
 
 /* KEYFRAMES */
-
-@-webkit-keyframes animateCloud {
+@-webkit-keyframes animatedCloud {
     0% {
         margin-left: -1000px;
     }
@@ -110,7 +111,8 @@ body {
     }
 }
 
-@-moz-keyframes animateCloud {
+
+@-moz-keyframes animatedCloud {
     0% {
         margin-left: -1000px;
     }
@@ -119,7 +121,7 @@ body {
     }
 }
 
-@keyframes animateCloud {
+@keyframes animatedCloud {
     0% {
         margin-left: -1000px;
     }
@@ -131,9 +133,9 @@ body {
 /* ANIMATIONS */
 
 .x1 {
-	-webkit-animation: animateCloud 60s linear infinite;
-	-moz-animation: animateCloud 60s linear infinite;
-	animation: animateCloud 60s linear infinite;
+	-webkit-animation: animatedCloud 60s linear infinite;
+	-moz-animation: animatedCloud 60s linear infinite;
+	animation: animatedCloud 60s linear infinite;
 
 	-webkit-transform: scale(0.65);
 	-moz-transform: scale(0.65);
@@ -141,9 +143,9 @@ body {
 }
 
 .x2 {
-	-webkit-animation: animateCloud 80s linear infinite;
-	-moz-animation: animateCloud 80s linear infinite;
-	animation: animateCloud 80s linear infinite;
+	-webkit-animation: animatedCloud 80s linear infinite;
+	-moz-animation: animatedCloud 80s linear infinite;
+	animation: animatedCloud 80s linear infinite;
 
 	-webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
@@ -151,9 +153,9 @@ body {
 }
 
 .x3 {
-	-webkit-animation: animateCloud 50s linear infinite;
-	-moz-animation: animateCloud 50s linear infinite;
-	animation: animateCloud 50s linear infinite;
+	-webkit-animation: animatedCloud 50s linear infinite;
+	-moz-animation: animatedCloud 50s linear infinite;
+	animation: animatedCloud 50s linear infinite;
 
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
@@ -161,24 +163,24 @@ body {
 }
 
 .x4 {
-	-webkit-animation: animateCloud 120s linear infinite;
-	-moz-animation: animateCloud 120s linear infinite;
-	animation: animateCloud 120s linear infinite;
+	-webkit-animation: animatedCloud 120s linear infinite;
+	-moz-animation: animatedCloud 120s linear infinite;
+	animation: animatedCloud 120s linear infinite;
 
 	-webkit-transform: scale(0.4);
 	-moz-transform: scale(0.4);
 	transform: scale(0.4);
 }
 
-// .x5 {
-// 	-webkit-animation: animateCloud 25s linear infinite;
-// 	-moz-animation: animateCloud 25s linear infinite;
-// 	animation: animateCloud 25s linear infinite;
+.x5 {
+	-webkit-animation: animatedCloud 140s linear infinite;
+	-moz-animation: animatedCloud 140s linear infinite;
+	animation: animatedCloud 140s linear infinite;
 
-// 	-webkit-transform: scale(0.55);
-// 	-moz-transform: scale(0.55);
-// 	transform: scale(0.55);
-// }
+	-webkit-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	transform: scale(0.55);
+}
 
 /* OBJECTS */
 
