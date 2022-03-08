@@ -16,6 +16,10 @@
       <div class="x4">
           <div class="cloud"></div>
       </div>
+
+      <div class="x5">
+          <div class="cloud"></div>
+      </div>
   </div>
     <div class="container-form">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -29,7 +33,7 @@
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Play" , class: "game-button green" %>
           <br>
           <%= render "devise/shared/links" %>
         </div>
