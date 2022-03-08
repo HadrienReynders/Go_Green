@@ -33,12 +33,13 @@
     align-items: flex-end;
     width: auto;
 
-    & li:hover {
-      transform: scale(1.1);
-    }
+
   }
 
+  & li:hover {
+    transform: scale(1.1);
 
+  }
 }
 
 .selected-tasks-container {
