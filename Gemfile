@@ -34,6 +34,7 @@ group :development do
   gem "binding_of_caller"
 end
 
+
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'

@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     @users = User.all
 
     @select_tasks = SelectTask.all
-    @lol = SelectTask.first.task.description
+    # @lol = SelectTask.first.task.description
     @completed_tasks = SelectTask.select {|task| task[:status] == true }.last(5).reverse
     @tasks = Task.all
 

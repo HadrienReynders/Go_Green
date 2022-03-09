@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'PixelColeco-4vJW';
+  src: url('PixelColeco-4vJW.ttf');
+}
+
 .btn-dashboard {
   background-color: $go-green-light;
   color: $go-brown-dark;
@@ -23,7 +28,7 @@ body {background-color: #111; text-align: center; padding: 30px;background-image
   cursor: pointer;
   text-decoration: none !important;
   outline: none !important;
-  font-family: 'Carter One', sans-serif;
+  font-family: 'PixelColeco-4vJW';
   font-size: 20px;
   line-height: 1.5em;
   letter-spacing: .1em;
