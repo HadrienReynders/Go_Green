@@ -8,11 +8,6 @@
   src: url('PixelColeco-4vJW.ttf');
 }
 
-@font-face {
-  font-family: 'PixelTakhisis-ZajJ';
-  src: url('PixelTakhisis-ZajJ.ttf');
-}
-
 .form-inputs-landing {
   background-color: #d8f3dc;
   //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
@@ -25,9 +20,8 @@
   width: 400px;
   margin-left: -211px;
   margin-top: -91px;
-  // font-family: roboto;
+  font-family: "PixelColeco-4vJW";
   border: solid 1px $go-green-light;
-  font-family: "manrope";
   font-size: 19px;
 
   .form-check {
