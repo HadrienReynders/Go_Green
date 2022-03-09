@@ -18,9 +18,9 @@ class SelectTasksController < ApplicationController
     tasks_id.each do |task_id|
       @select_task = SelectTask.new(task_id: task_id.to_i, user_id: current_user.id)
       @select_task.save
-      # if @select_task.save
-      #   DeleteUserSelectedTask.set(wait_until: DateTime.now + 10.seconds ).perform_later(current_user)  # <- The job is queued
-      # end
+      if @select_task.save
+        DeleteUserSelectedTask.set(wait_until: DateTime.now.end_of_day ).perform_later(current_user)  # <- The job is queued
+      end
     end
     # redirect_to dashboard_path(garden_id: GardenUser.order(garden_id: :asc).find { |gardenuser| gardenuser.user_id == current_user.id }.garden_id)
      redirect_to dashboard_path(garden_id: params[:select_task][:garden_id])
