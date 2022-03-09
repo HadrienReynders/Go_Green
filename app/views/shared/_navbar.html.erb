@@ -4,6 +4,14 @@
       <%= image_tag "https://img.favpng.com/8/4/11/logo-seed-company-png-favpng-q2c5sTUR6Eyw5Js4VyT8522qF.jpg" %>
     <% end %>
 
+    <% @gardens.each do |garden| %>
+      <% garden.garden_users.each do |garden_user| %>
+        <% if garden_user.user_id == current_user.id %>
+          <%= garden.name if garden.id == params[:garden_id].to_i %>
+        <% end %>
+      <% end %>
+    <% end %>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
