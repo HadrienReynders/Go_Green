@@ -125,7 +125,16 @@
 
 #water {
   display: flex;
-  justify-content: center;
   position: relative;
-  bottom: 52px;
+  bottom: 55px;
+  left: 170px;
+
+
+  img {
+    opacity: 0.8;
+  }
+
+  :hover img {
+    opacity: 1;
+  }
 }
