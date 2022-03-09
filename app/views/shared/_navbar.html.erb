@@ -7,7 +7,7 @@
     <% @gardens.each do |garden| %>
       <% garden.garden_users.each do |garden_user| %>
         <% if garden_user.user_id == current_user.id %>
-          <%= garden.name if garden.id == params[:garden_id].to_i %>
+          <h4><%= garden.name if garden.id == params[:garden_id].to_i %></h4>
         <% end %>
       <% end %>
     <% end %>
