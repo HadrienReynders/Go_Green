@@ -62,6 +62,7 @@
   & h4 {
     margin-bottom: 0px;
     color: $go-green-light;
+    padding-right: 5px;
 
   }
 
@@ -86,11 +87,10 @@
 
   & .last-completed-tasks {
     object-fit: contain;
-    width: 70%;
+    width: 71%;
     position: absolute;
-    //top: 75px;
     top: 20px;
-    left: 30px;
+    left: 13px;
 
   }
 
