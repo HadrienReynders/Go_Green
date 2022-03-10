@@ -1,0 +1,5 @@
+meta_product_name: "Go-green!"
+meta_title: "Go-green! - Product tagline"
+meta_description: "Go-green! is a web app game witch helps you reduce your carbon footprint because it transposes real life actions to a game"
+meta_image: "go_green.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
