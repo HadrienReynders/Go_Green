@@ -29,7 +29,7 @@
 }
 
 .about {
-  height: 390px;
+  height: 60%;
   width: 750px;
   background-color: #d8f3dcb6;
   //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
@@ -38,18 +38,16 @@
   box-shadow: 1px 2px 1px $go-green-middle;
   font-family: "PixelColeco-4vJW";
   border: solid 1px $go-green-light;
-  font-size: 19px;
+  font-size: 15px;
 
   h5 {
     font-size: 30px !important;
     font-family: "PixelColeco-4vJW" !important;
-    text-decoration: underline;
   }
 }
 
 #button-landing {
   position: relative;
-  top: 162px;
   cursor: pointer;
   text-decoration: none !important;
   outline: none !important;
@@ -76,10 +74,7 @@
   margin-top: 20px;
 }
 
-// #blank {
-//   bottom: 44vh;
-//   position: relative;
-//   height: 220vh;
-//   background: linear-gradient(0deg, #89bde0 100%, #97ccf8 35%, #c4ebff 0%);
-//   z-index: -1;
-// }
+.about p {
+  font-family: 'Fredoka';
+  font-size: 18px;
+}
