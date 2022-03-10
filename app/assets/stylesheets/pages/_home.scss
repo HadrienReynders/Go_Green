@@ -1,7 +1,80 @@
-// Specific CSS for your home-page
+
+.home {
+  height: fit-content;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(20,57,145,1) 16%, rgba(41,143,212,1) 43%, rgba(151,204,248,1) 67%, rgba(196,235,255,1) 100%);
+  flex-direction: column;
+  align-items: center;
+}
+
 #blank {
-  top: 70vh;
+  bottom: 0;
+  left: 0;
+  padding-top: 50px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.landing-card {
+  height: 100vh;
+}
+
+.form-section {
   position: relative;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(137,189,224,1) 100%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 0%);
 }
+
+.about {
+  height: 390px;
+  position: absolute;
+  right: 350px;
+  top: 210px;
+  width: 750px;
+  background-color: #d8f3dcb6;
+  //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 1px 2px 1px $go-green-middle;
+  font-family: "PixelColeco-4vJW";
+  border: solid 1px $go-green-light;
+  font-size: 19px;
+}
+
+#button-landing {
+  position: relative;
+  top: 125px;
+  cursor: pointer;
+  text-decoration: none !important;
+  outline: none !important;
+  font-family: 'PixelColeco-4vJW';
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: .1em;
+  text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2, 2px -2px 1px #0066a2, -2px -2px 1px #0066a2, 0px 2px 1px #0066a2, 0px -2px 1px #0066a2, 0px 4px 1px #004a87, 2px 4px 1px #004a87, -2px 4px 1px  #004a87;
+  border: none;
+  margin: 10px 10px 25px;
+  background: repeating-linear-gradient( 45deg, #3ebbf7, #3ebbf7 5px, #45b1f4 5px, #45b1f4 10px);
+  border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+  border-top: 3px solid rgba(255,255,255,.3);
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 8px 15px 10px;
+  box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0,0,0,.3), 0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e, 0 15px 1px 6px rgba(0,0,0,.3);
+  width: 300px;
+  background: repeating-linear-gradient( 45deg, #54d440, #54d440 5px, #52cc3f 5px, #52cc3f 10px);
+  box-shadow: 0 6px 0 #348628, 0 8px 1px 1px rgba(0,0,0,.3), 0 10px 0 5px #2a6d20, 0 12px 0 5px #39822e, 0 15px 0 5px #1d4c16, 0 15px 1px 6px rgba(0,0,0,.3);
+  border-bottom: 3px solid rgba(40, 117, 29, 0.5);
+  text-shadow: 2px 2px 1px #348628, -2px 2px 1px #348628, 2px -2px 1px #348628, -2px -2px 1px #348628, 0px 2px 1px #348628, 0px -2px 1px #348628, 0px 4px 1px #1d4c16, 2px 4px 1px #1d4c16, -2px 4px 1px #1d4c16;
+  width: 300px;
+  margin-top: 20px;
+  scroll-behavior: smooth;
+}
+
+// #blank {
+//   bottom: 44vh;
+//   position: relative;
+//   height: 220vh;
+//   background: linear-gradient(0deg, #89bde0 100%, #97ccf8 35%, #c4ebff 0%);
+//   z-index: -1;
+// }

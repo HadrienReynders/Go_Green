@@ -8,27 +8,32 @@
   src: url('PixelColeco-4vJW.ttf');
 }
 
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
 .form-inputs-landing {
   background-color: #d8f3dcb6;
   //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
   padding: 20px;
   border-radius: 7px;
   box-shadow: 1px 2px 1px $go-green-middle;
-  position: absolute;
-  left: 50%;
-  top: 40%;
   width: 400px;
-  margin-left: -211px;
-  margin-top: -91px;
   font-family: "PixelColeco-4vJW";
   border: solid 1px $go-green-light;
   font-size: 19px;
+  position: absolute;
+  top: 17vh;
 
   .form-check {
     margin: 0px 0px 15px !important;
     align-items: flex-start;
-    position: absolute;
-    left: 120px;
+    // position: absolute;
+    // left: 120px;
   }
 
   .form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;}
