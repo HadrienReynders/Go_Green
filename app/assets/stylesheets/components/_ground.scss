@@ -30,8 +30,8 @@
   margin : 0px 10px 0px 10px;
   text-decoration: none;
   color: $go-green-light;
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.233));
-  filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.411));
+  //-webkit-filter: drop-shadow(3px 5px 10px rgba(34, 34, 34, 0.233));
+  //filter: drop-shadow(3px 5px 10px rgba(34, 34, 34, 0.411));
 
   & img {
     margin-bottom: 20px;
@@ -51,7 +51,7 @@ a:hover {
 
 .current-user-plant {
   -webkit-filter: drop-shadow(3px 5px 10px rgba(214, 252, 253, 0.705));
-  filter: drop-shadow(5px 5px 5px rgba(214, 252, 253, 0.747));
+  filter: drop-shadow(3px 5px 10px rgba(214, 252, 253, 0.747));
   color: $go-blue-light;
   text-decoration: none;
 
