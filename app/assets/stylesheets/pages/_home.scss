@@ -29,16 +29,19 @@
 }
 
 .about {
-  height: 60%;
+  height: fit-content;
   width: 750px;
   background-color: #d8f3dcb6;
-  //background: url("https://www.deco.fr/sites/default/files/styles/width_880/public/2020-01/shutterstock_524921872.jpg?itok=ZifqoN6W");
   padding: 20px;
   border-radius: 7px;
-  box-shadow: 1px 2px 1px $go-green-middle;
+  box-shadow: 1px 2px 1px #9DD65B;
   font-family: "PixelColeco-4vJW";
-  border: solid 1px $go-green-light;
+  border: solid 1px #D2F07B;
   font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h5 {
     font-size: 30px !important;

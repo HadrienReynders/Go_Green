@@ -1,6 +1,11 @@
 .modal-content {
   border-radius: 10px;
   padding: 10px;
+  height: 60vh;
+
+  .select-tasks {
+    overflow: scroll;
+  }
 
   .tag-item {
     display: flex;
