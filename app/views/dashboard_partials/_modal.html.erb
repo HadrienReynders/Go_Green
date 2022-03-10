@@ -8,13 +8,13 @@
 
               <div class="select-tasks" >
                 <%= simple_form_for @select_task do |f| %>
-                  <%= f.association :task, as: :check_boxes, input_html: { data: {controller:'checkbox', target:'check', action:'click->toggle'} }, legend_tag: false %>
+                  <%= f.association :task, as: :check_boxes, input_html: { class: "tag-selector", data: {controller:'checkbox', target:'check', action:'click->toggle'} }, item_wrapper_class: 'tag-item', legend_tag: false %>
                   <%= f.hidden_field :garden_id, value: params[:garden_id] %>
-                  <%= f.submit class: 'btn-dark' %>
+                  <%= f.button :submit, 'Add tasks', class: 'btn-dashboard'%>
                 <% end %>
               </div>
 
-              <button data-action="click->modal#close">Close</button>
+              <button id="close-button" data-action="click->modal#close">X</button>
             </div>
         </div>
     </div>
