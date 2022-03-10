@@ -76,7 +76,7 @@ body {
 	background: linear-gradient(0deg, rgba(137,189,224,1) 0%, rgba(151,204,248,1) 35%, rgba(196,235,255,1) 100%);
 	color: #333;
 	font: 100% Arial, Sans Serif;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
