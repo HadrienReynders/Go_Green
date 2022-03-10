@@ -4,8 +4,13 @@
         <% @users.each do |user| %>
           <% if garden_user.user_id == user.id && garden_user.garden_id == @garden.id %>
                   <li> <img class="avatar" src=<%= user.avatar_url %> alt="avatar">
-                  <h4><%= "#{user.first_name}" %></h4>
-                  <p><%= "- lvl #{compute_lvl(user).floor}" %></p>
+                  <% if current_user == user  %>
+                  <p><strong><%= "#{user.first_name}" %></strong></p>
+                  <p><strong><%= "- level #{compute_lvl(user).floor}" %></strong></p>
+                  <% else %>
+                  <p><%= "#{user.first_name}" %></p>
+                  <p><%= "- level #{compute_lvl(user).floor}" %></p>
+                  <%end  %>
                   </li>
           <% end %>
         <% end %>

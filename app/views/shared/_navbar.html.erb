@@ -1,7 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://img.favpng.com/8/4/11/logo-seed-company-png-favpng-q2c5sTUR6Eyw5Js4VyT8522qF.jpg" %>
+      <h1 id="navbar-title" style="font-family:PixelColeco-4vJW" color="#D2F07B">GG</h1>
+    <% end %>
+
+    <% @gardens.each do |garden| %>
+      <% garden.garden_users.each do |garden_user| %>
+        <% if garden_user.user_id == current_user.id %>
+          <h4><%= garden.name if garden.id == params[:garden_id].to_i %></h4>
+        <% end %>
+      <% end %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,13 +20,13 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <a class="nav-link" href="#"> Create a new garden </a>
+            <a class="nav-link" href="#"> Create garden </a>
           </li>
            <li class="nav-item active">
             <a class="nav-link" href="#"> Join garden </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Add a friend </a>
+            <a class="nav-link" href="#"> Add friend </a>
           </li>
           <li class="nav-item dropdown">
             <%= link_to "Garden list",  "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

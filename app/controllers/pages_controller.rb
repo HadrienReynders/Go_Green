@@ -60,7 +60,7 @@ class PagesController < ApplicationController
         "tomato/tomato_#{current_lvl - 8}_wilts.png"
       end
     else
-        "dead.png"
+      "dead.png"
     end
   end
 
