@@ -1,27 +1,4 @@
-<div class="container">
-  <h3 id="gogreen">Go Green!</h3><img src="" alt="">
-  <div id="background-wrap">
-      <div class="x1">
-          <div class="cloud"></div>
-      </div>
-
-      <div class="x2">
-          <div class="cloud"></div>
-      </div>
-
-      <div class="x3">
-          <div class="cloud"></div>
-      </div>
-
-      <div class="x4">
-          <div class="cloud"></div>
-      </div>
-
-      <div class="x5">
-          <div class="cloud"></div>
-      </div>
-  </div>
-    <div class="container-form">
+<div class='form-container' >
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs-landing">
           <%= f.input :email,
@@ -38,5 +15,4 @@
           <%= render "devise/shared/links" %>
         </div>
       <% end %>
-    </div>
 </div>
