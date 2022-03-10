@@ -15,7 +15,7 @@
   justify-content: center;
   z-index: 0;
   position: fixed;
-  bottom: 100px;
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -30,10 +30,32 @@
   margin : 0px 10px 0px 10px;
   text-decoration: none;
   color: $go-green-light;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.233));
+  filter: drop-shadow(5px 5px 5px rgba(34, 34, 34, 0.411));
+
+  & img {
+    margin-bottom: 20px;
+  }
 
   & :hover {
     color: $go-green-light !important;
     filter: brightness(120%)
   }
 
+}
+
+.current-user-plant {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(255, 217, 0, 0.541));
+  filter: drop-shadow(5px 5px 5px rgb(255, 208, 0));
+  color: $go-blue-light;
+  text-decoration: none;
+
+  & img {
+    margin-bottom: 20px;
+  }
+
+  & :hover {
+    filter: brightness(120%);
+    color: black;
+  }
 }
