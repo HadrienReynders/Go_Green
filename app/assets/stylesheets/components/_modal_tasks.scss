@@ -2,15 +2,37 @@
   border-radius: 10px;
   padding: 10px;
 
-  & .form-check {
-    background-color: $go-green-light;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 10px;
-    box-shadow: 2px 4px 6px 0px #3E8932;
+  .tag-item {
+    display: flex;
+    flex-direction: row;
   }
 
-  & button, .btn-dark {
+  .tag-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+
+  .tag-selector + label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 50rem;
+    padding: 0.1rem 0.5rem;
+    background-color: $go-green-light;
+    color: black;
+    border: 1px solid $go-green-middle;
+    margin-right: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .tag-selector:checked + label {
+    background-color: $go-green-middle;
+    color: black;
+  }
+
+
+  & .btn-dark {
     background-color: $go-yellow-dark;
     color: $go-brown-dark;
     border: 1px solid $go-brown-dark;
@@ -26,5 +48,28 @@
   & .form-check-input:checked {
     background-color: $go-green-light;
     border-color: $go-green-light;
+  }
+
+  & #close-button {
+    color: black;
+    background: white;
+    border: 1px solid #4A4A4A;
+    /* padding: 8px 24px; */
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+
+    & #close-button:hover {
+      opacity: 1;
+    }
   }
 }
