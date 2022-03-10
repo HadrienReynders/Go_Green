@@ -18,7 +18,7 @@ ramy = User.new(
 ramy.save!
 
   julien = User.new(
-    email: "c@c.c",
+    email: "lozetjulien@gmail.com",
     password: "123456",
     first_name: "Julien",
     last_name: "Lozet",
@@ -74,44 +74,79 @@ ramy.save!
   task.save!
 
   task = Task.new(
-    title: "Caught red-handed",
+    title: "Say goodbye to plastic bags for today",
     description: "Say goodbye to plastic bags for today",
     exp: 10
   )
   task.save!
 
   task = Task.new(
-    title: "Give your waste to the worms",
+    title: "Make your own compost",
     description: "Make your own compost",
     exp: 45
   )
   task.save!
 
   task = Task.new(
-    title: "#NoFilter",
+    title: "Remove coffee capsules for the week",
     description: "I remove coffee capsules for the week",
-    exp: 15
+    exp: 65
   )
   task.save!
 
   task = Task.new(
-    title: "Snif",
+    title: "Dont use paper towels for a day",
     description: "I quit the paper tissues for a day",
     exp: 5
   )
   task.save!
 
   task = Task.new(
-    title: "VROOM",
+    title: "Don't use your car for a day",
     description: "Don't use your car for a day",
     exp: 15
   )
   task.save!
 
   task = Task.new(
-    title: "Layer Up!",
+    title: "Put on an extra layer of clothing instead of turning on the heating",
     description: "Put on an extra layer of clothing instead of turning on the heating. Seriously, doubling up on your socks does wonders!",
     exp: 35
+  )
+  task.save!
+
+  task = Task.new(
+    title: "Use a reusable shopping bag",
+    description: "lol",
+    exp: 30
+  )
+  task.save!
+
+  task = Task.new(
+    title: "Use the cold water cycle for washing your clothes",
+    description: "lol",
+    exp: 15
+  )
+  task.save!
+
+  task = Task.new(
+    title: "Unplug devices",
+    description: "lol",
+    exp: 10
+  )
+  task.save!
+
+  task = Task.new(
+    title: "Dont use paper today",
+    description: "lol",
+    exp: 10
+  )
+  task.save!
+
+  task = Task.new(
+    title: "Have fewer children",
+    description: "lol",
+    exp: 100
   )
   task.save!
 
