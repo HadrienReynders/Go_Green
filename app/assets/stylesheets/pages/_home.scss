@@ -81,3 +81,26 @@
   font-family: 'Fredoka';
   font-size: 18px;
 }
+
+.home-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0px;
+  padding-top: 10px;
+  margin: 0px 15px 15px 15px;
+
+  & li {
+    list-style: none;
+    width: 20%;
+    height: 100%;
+    //border: solid #9DD65B;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #ffffff66;
+  }
+
+}
